@@ -192,7 +192,7 @@ body{
 }
 .chapterTitle{font-weight:950; font-size:16px}
 .chapterDesc{font-size:12px; color:var(--muted); line-height:1.45}
-.chapterRow{display:flex; align-items:center; justify-content:space-between; gap:10px}
+.chapterRow{display:flex; align-items:center; justify-content:space-between; gap:12px}
 .progressBar{height:10px; border-radius:999px; border:1px solid var(--border); background: rgba(11,16,32,.35); overflow:hidden}
 .progressFill{height:100%; width:0%; background: rgba(34,197,94,.55)}
 .chapterActions{display:flex; gap:10px; flex-wrap:wrap}
@@ -503,3 +503,7 @@ select, .textInput{ padding: 8px 10px; }
   border: 0;
   background: transparent;
 }
+
+.progressWrap{display:flex; align-items:center; gap:10px; width:100%;}
+.chapterRow .progressBar{height:12px; flex:1; }
+.progressMeta{min-width:42px; text-align:right;}
