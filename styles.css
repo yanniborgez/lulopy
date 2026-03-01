@@ -507,3 +507,44 @@ select, .textInput{ padding: 8px 10px; }
 .progressWrap{display:flex; align-items:center; gap:10px; width:100%;}
 .chapterRow .progressBar{height:12px; flex:1; }
 .progressMeta{min-width:42px; text-align:right;}
+
+/* --- compact blocks --- */
+.compactBlock{
+  padding: 18px;
+}
+.compactBlock .cardHeader{
+  margin-bottom: 8px;
+}
+.compactBlock h2{
+  font-size: 28px;
+  margin: 0;
+}
+.compactBlock .small.muted{
+  font-size: 13px;
+}
+.compactBlock .actions.compactActions{
+  margin-top: 12px;
+  gap: 10px;
+}
+/* Daily list tighter */
+.compactBlock .dailyItem{
+  padding: 12px 14px;
+  margin-top: 10px;
+}
+.compactBlock .dailyTitle{
+  font-size: 16px;
+}
+.compactBlock .dailyMeta{
+  font-size: 12px;
+}
+/* Challenge tighter */
+.compactBlock .challengeWrap{
+  margin-top: 12px;
+  gap: 8px;
+}
+.compactBlock .challengeRow{
+  gap: 10px;
+}
+.compactBlock #challengeHint{
+  line-height: 1.25;
+}

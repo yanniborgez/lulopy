@@ -524,7 +524,7 @@ function renderChallengeHint(){
     if(pill) pill.textContent = "Pendiente";
     if(btn) btn.disabled = false;
     $("challengeHint").textContent = remaining
-      ? `Reto disponible. 1 intento. Quedan ${remaining} retos únicos.`
+      ? `Disponible • 1 intento • ${remaining} restantes.`
       : "Reto disponible. 1 intento.";
     return;
   }
@@ -532,12 +532,12 @@ function renderChallengeHint(){
   if(dc.attempted){
     if(pill) pill.textContent = "Intentado";
     if(btn) btn.disabled = false;
-    $("challengeHint").textContent = `Reto de hoy ya intentado. Vuelve mañana. Quedan ${remaining} retos únicos.`;
+    $("challengeHint").textContent = `Ya intentado hoy • Vuelve mañana • ${remaining} restantes.`;
   } else {
     if(pill) pill.textContent = "Pendiente";
     if(btn) btn.disabled = false;
     $("challengeHint").textContent = remaining
-      ? `Reto disponible. 1 intento. Quedan ${remaining} retos únicos.`
+      ? `Disponible • 1 intento • ${remaining} restantes.`
       : "Reto disponible. 1 intento.";
   }
 }
