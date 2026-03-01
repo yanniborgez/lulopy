@@ -1156,7 +1156,7 @@ $("startExamBtn").addEventListener("click", ()=>{
 $("saveSettingsBtn").addEventListener("click", saveSettings);
 
 $("editProfileBtn").addEventListener("click", ()=> openProfileOverlay(false));
-$("playerTag").addEventListener("click", ()=> openProfileOverlay(false));
+const __pt = $("playerTag"); if(__pt) __pt.addEventListener("click", ()=> openProfileOverlay(false));
 $("closeProfileBtn").addEventListener("click", closeProfileOverlay);
 $("saveProfileBtn").addEventListener("click", saveProfile);
 
