@@ -433,3 +433,37 @@ select, .textInput{ padding: 8px 10px; }
   font-size: 11px;
   margin-top: 4px;
 }
+
+/* --- v10.2 alignment fixes --- */
+.hero.compactHero{
+  align-items: center;
+}
+.hero.compactHero .heroLeft{
+  min-width: 520px;
+}
+.hero.compactHero .heroMetaRow{
+  justify-content: flex-start;
+  gap: 16px;
+}
+.hero.compactHero #continueHint{
+  margin-left: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero.compactHero .heroRight{
+  width: 100%;
+}
+.hero.compactHero .statGrid{
+  align-items: stretch;
+}
+
+.challengeActions{
+  margin-top: 10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.challengeActions .btn{ align-self:flex-start; }
+.challengeActions #challengeHint{ margin:0; }
