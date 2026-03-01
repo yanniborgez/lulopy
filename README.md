@@ -1,24 +1,34 @@
 # LuloPy
 
-Aplicación web estática para practicar Python (se ejecuta **en el navegador** con Pyodide).  
-Incluye ruta guiada, práctica libre, misiones diarias y reto del día. El progreso se guarda en el navegador y puede exportarse.
+LuloPy es una aplicación web estática para practicar Python con ejercicios verificables en el navegador (Pyodide).
+Incluye ruta guiada, práctica libre por capítulo, misiones diarias y un reto del día.
 
-## Ejecutar localmente
-1) Abre una terminal en esta carpeta.
-2) Ejecuta uno de estos:
+## Contenido
+- **Entrenamiento:** 240 ejercicios (4 capítulos × 60; 36 código / 12 fill / 12 opción múltiple por capítulo)
+- **Exámenes:** 75 incisos (3 exámenes × 25; un intento por inciso)
+- **Misiones diarias:** 100 ejercicios de código (más largos)
+- **Reto del día:** 100 ejercicios avanzados (1 intento por día)
+
+## Uso local
+1) Abrir una terminal en esta carpeta.
+2) Ejecutar:
    - Windows: `start_windows.bat`
    - macOS/Linux: `./start_mac_linux.sh`
-3) Abre la URL que aparece (normalmente http://localhost:8000)
+3) Abrir la URL indicada (normalmente `http://localhost:8000`).
 
-## Desplegar gratis en Vercel (plan Hobby, uso personal/no comercial)
-1) Sube **este contenido** a un repositorio en GitHub.
-2) En Vercel: New Project → Import Git Repository → Framework: Other → Deploy.
-   - No necesitas build command.
-3) Vercel publicará el sitio como estático (HTML/CSS/JS/JSON).
+## Despliegue en Vercel (estático)
+1) Subir el contenido de este repositorio a GitHub.
+2) En Vercel: **New Project → Import** el repositorio.
+3) Configuración recomendada:
+   - **Framework:** Other
+   - **Root Directory:** `./`
+   - **Build Command:** (vacío)
+   - **Output Directory:** (vacío)
+4) Deploy.
 
 ## Estructura
-- `index.html`, `app.js`, `styles.css`: app
+- `index.html`, `app.js`, `styles.css`: aplicación
 - `exercises.json`, `exams.json`: banco principal
-- `daily_bank.json`: misiones diarias (100, código largo)
-- `challenge_bank.json`: reto del día (100, código difícil, 1 intento/día)
-- `practicas/`: prácticas en texto para resolver en IDE
+- `daily_bank.json`: misiones diarias (100)
+- `challenge_bank.json`: reto del día (100)
+- `practicas/`: prácticas para resolver en IDE

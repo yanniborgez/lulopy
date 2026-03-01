@@ -71,7 +71,6 @@ async function runPython(code){
   return {stdout: normalizeOut(stdoutBuf), stderr: normalizeOut(stderrBuf)};
 }
 
-// ---------- Banks ----------
 let trainBank = [];
 let exams = [];
 let dailyBank = [];
@@ -85,7 +84,6 @@ async function loadData(){
   $("totalExams").textContent = String(new Set(exams.map(x => x.exam_id)).size);
 }
 
-// ---------- Chapters / Narrative ----------
 const CHAPTERS = [
   { id: 1, title: "Capítulo 1 — Fundamentos", desc: "Arranque controlado. Salidas claras, cero ruido, cero errores." },
   { id: 2, title: "Capítulo 2 — Variables y Cálculo", desc: "Las cifras viven en variables. La precisión es una regla." },
@@ -101,10 +99,8 @@ const EXAM_LABELS = {
 
 const NARRATIVE = {};
 
-// ---------- Emoji set ----------
 const EMOJIS = ["🕵️","🧾","🧠","🧩","🧰","🗝️","🗂️","🧱","🧪","🧯","🧿","🛰️","🕯️","🗡️","🗝️","🪪","🧷","🧲","🧮","📎"];
 
-// ---------- Utilities ----------
 function chapterExercises(chId){
   return trainBank.filter(e => Number(e.level) === Number(chId)).sort((a,b)=> a.id.localeCompare(b.id));
 }
@@ -128,7 +124,6 @@ function todayKey(){
 function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
 
 
-// ---------- Fill canonicalization (tolerant input) ----------
 function canonicalFillAnswer(raw){
   const s0 = (raw ?? "").toString().trim().replace(/\r\n/g, "\n");
   const s = s0;
@@ -161,7 +156,6 @@ function canonicalFillAnswer(raw){
   return s;
 }
 
-// ---------- Progress ----------
 function defaultProgress(){
   return {
     profile: { name: null, emoji: "🕵️" },
@@ -189,7 +183,6 @@ function loadProgress(){
     merged.daily = {...defaultProgress().daily, ...(p.daily || {})};
     merged.last = {...defaultProgress().last, ...(p.last || {})};
 
-    // v6 buckets + migration
     merged.trainDone = {...defaultProgress().trainDone, ...(p.trainDone || {})};
     merged.dailyDone = {...defaultProgress().dailyDone, ...(p.dailyDone || {})};
     merged.challengeDone = {...defaultProgress().challengeDone, ...(p.challengeDone || {})};
@@ -199,7 +192,6 @@ function loadProgress(){
 
     merged.dailyChallenge = {...defaultProgress().dailyChallenge, ...(p.dailyChallenge || {})};
 
-    // migrate older versions
     if(p.done && !p.trainDone){
       merged.trainDone = {...merged.trainDone, ...p.done};
     }
@@ -227,7 +219,6 @@ function updateHUD(){
   $("modeChip").textContent = (progress.settings.playMode === "guided" ? "Ruta guiada" : "Libre");
 }
 
-// ---------- Game state ----------
 let mode = "campaign"; // campaign | topic | exam | daily | challenge
 let chapter = 1;
 let topic = null;
@@ -235,7 +226,6 @@ let examId = null;
 let list = [];
 let idx = 0;
 
-// ---------- UI helpers ----------
 function setFeedback(kind, html){
   const box = $("feedback");
   box.classList.remove("good","bad");
@@ -277,7 +267,6 @@ function chapterProgress(chId){
   return {done, total, pct: total ? Math.round(100*done/total) : 0};
 }
 
-// ---------- Story gating ----------
 function isExamUnlocked(exId){
   if(progress.settings.playMode !== "guided") return true;
   const pctReq = Number(progress.settings.unlockPct || 70);
@@ -294,13 +283,11 @@ function isExamUnlocked(exId){
   return true;
 }
 
-// ---------- Narrative overlay ----------
 function openNarrative(kind, chId, onOk){ onOk?.(); }
 
 function closeNarrative(){}
 
 
-// ---------- Overlays ----------
 function openOverlay(){
   $("overlay").classList.remove("hidden");
   refreshTopics();
@@ -311,7 +298,6 @@ function closeOverlay(){
   $("overlay").classList.add("hidden");
 }
 
-// Profile overlay
 let profileMustSave = false;
 function openProfileOverlay(mustSave=false){
   profileMustSave = mustSave;
@@ -350,7 +336,6 @@ function saveProfile(){
     return;
   }
   progress.profile.name = name;
-  // emoji already saved on selection; ensure present
   progress.profile.emoji = progress.profile.emoji || "🕵️";
   saveProgress(progress);
   updateHUD();
@@ -358,7 +343,6 @@ function saveProfile(){
   profileMustSave = false;
 }
 
-// Settings panel
 function syncSettingsUI(){
   $("playModeSelect").value = progress.settings.playMode || "guided";
   $("unlockPctSelect").value = String(progress.settings.unlockPct || 70);
@@ -372,7 +356,6 @@ function saveSettings(){
   updateExamNote();
 }
 
-// ---------- Daily missions ----------
 function ensureDailyMissions(forceNew=false){
   const key = todayKey();
   const d = progress.daily || {date:null, missions:[], doneIds:[], rerolled:false};
@@ -440,7 +423,6 @@ function renderDailyUI(){
   $("rerollDailyBtn").textContent = canReroll ? "Re-crear (una vez)" : "Re-crear (usado)";
 }
 
-// ---------- Challenge ----------
 function renderChallengeHint(){
   ensureDailyChallenge();
   const key = todayKey();
@@ -483,7 +465,6 @@ function ensureDailyChallenge(){
   saveProgress(progress);
 }
 
-// ---------- Rendering chapters ----------
 function renderChapterCards(){
   const root = $("chapterCards");
   root.innerHTML = "";
@@ -545,7 +526,6 @@ function updateContinueHint(){
   $("continueHint").textContent = label;
 }
 
-// ---------- Exercise rendering ----------
 function renderCurrent(){
   const e = list[idx];
   if(!e){
@@ -555,7 +535,6 @@ function renderCurrent(){
     return;
   }
 
-  // Chips
   if(mode === "campaign"){
     $("chipChapter").textContent = `Capítulo ${chapter}`;
     $("chipPath").textContent = "Ruta guiada";
@@ -586,7 +565,6 @@ function renderCurrent(){
   $("workspace").innerHTML = "";
   clearConsole();
 
-  // Answer button visibility
   $("showAnswerBtn").classList.toggle("hidden", mode==="exam");
 
   if(mode==="exam" && isExamLockedItem(e)){
@@ -631,7 +609,6 @@ function renderCurrent(){
     }
   }
 
-  // Save last session
   const run_ids = (mode === "daily" || mode === "challenge") ? (progress.last?.run_ids || list.map(x => x.id)) : null;
   progress.last = {
     mode,
@@ -645,7 +622,6 @@ function renderCurrent(){
   saveProgress(progress);
 }
 
-// ---------- Checking ----------
 function getUserAnswer(e){
   if(e.type === "mcq"){
     const checked = document.querySelector("input[name='mcq']:checked");
@@ -674,7 +650,6 @@ function markDone(id, ok, points){
     progress.streak = 0;
   }
 
-  // Daily tracking (only when daily mode)
   if(mode === "daily" && ok){
     if(!progress.daily.doneIds.includes(id)){
       progress.daily.doneIds.push(id);
@@ -728,7 +703,6 @@ async function checkCurrent(){
       if(mode==="exam"){
         ok = (await sha256(ansCanon)) === e.answer_hash;
       } else {
-        // tolerant: exact canonical match OR expected appears in raw (common when escriben la línea completa)
         ok = (ansCanon === expCanon) || raw.includes((e.answer ?? "").toString());
       }
 
@@ -762,7 +736,6 @@ async function checkCurrent(){
       }
     }
 
-    // Update home components when solving daily missions
     if(mode === "daily"){
       renderDailyUI();
     }
@@ -780,7 +753,6 @@ async function checkCurrent(){
   }
 }
 
-// ---------- Show answer (train only) ----------
 function showAnswer(){
   const e = list[idx];
   if(!e || mode==="exam") return;
@@ -793,7 +765,6 @@ function showAnswer(){
   }
 }
 
-// ---------- Next ----------
 function next(){
   if(idx < list.length - 1){
     idx += 1;
@@ -801,7 +772,6 @@ function next(){
     return;
   }
 
-  // End of list behavior
   if(mode === "campaign"){
     const chId = chapter;
     if(chId < 4){
@@ -816,7 +786,6 @@ function next(){
     return;
   }
 
-  // daily/challenge/topic/exam => back home
   showHome();
   renderChapterCards();
   renderDailyUI();
@@ -824,7 +793,6 @@ function next(){
   updateContinueHint();
 }
 
-// ---------- Navigation actions ----------
 function startCampaign(chId, skipStartNarrative=false){
   mode = "campaign";
   chapter = Number(chId);
@@ -840,7 +808,6 @@ function startCampaign(chId, skipStartNarrative=false){
   if(skipStartNarrative){
     openNarrative("start", chapter, go);
   } else {
-    // show narrative only when entering a chapter fresh or when explicitly continuing
     openNarrative("start", chapter, go);
   }
 }
@@ -872,7 +839,6 @@ function resumeLast(){
     buildCurrentList();
   }
 
-  // Sync to exercise_id if present
   if(last.exercise_id){
     const k = list.findIndex(x => x.id === last.exercise_id);
     if(k >= 0) idx = k;
@@ -972,7 +938,6 @@ function startChallenge(){
   renderCurrent();
 }
 
-// ---------- Export / Reset ----------
 function exportProgress(){
   const payload = {
     product: "LuloPy",
@@ -999,7 +964,6 @@ function resetAll(){
   updateContinueHint();
 }
 
-// ---------- Map helpers ----------
 function refreshTopics(){
   const chId = Number($("chapterSelect").value);
   const topics = chapterTopics(chId);
@@ -1027,7 +991,6 @@ function updateExamNote(){
   }
 }
 
-// ---------- Wire UI ----------
 $("menuBtn").addEventListener("click", openOverlay);
 $("openMapBtn").addEventListener("click", openOverlay);
 $("closeOverlayBtn").addEventListener("click", closeOverlay);
@@ -1091,12 +1054,10 @@ $("startDailyBtn").addEventListener("click", startDaily);
 $("rerollDailyBtn").addEventListener("click", rerollDaily);
 $("startChallengeBtn").addEventListener("click", startChallenge);
 
-// ---------- Boot ----------
 (async function main(){
   await loadData();
   updateHUD();
 
-  // Fill selects
   const chSel = $("chapterSelect");
   chSel.innerHTML = "";
   CHAPTERS.forEach(ch => {
@@ -1119,22 +1080,18 @@ $("startChallengeBtn").addEventListener("click", startChallenge);
   exSel.value = progress.last.exam_id || "EXAM-1";
   updateExamNote();
 
-  // Daily + Challenge blocks
   ensureDailyMissions(false);
   renderDailyUI();
   renderChallengeHint();
 
-  // Chapter cards
   renderChapterCards();
   updateContinueHint();
 
-  // Settings UI sync
   syncSettingsUI();
 
   // Pyodide
   await initPyodide();
 
-  // Onboarding on first entry
   if(!(progress.profile?.name || "").trim()){
     openProfileOverlay(true);
   }
