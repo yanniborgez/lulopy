@@ -1009,6 +1009,17 @@ function updateExamNote(){
 }
 
 $("menuBtn").addEventListener("click", openOverlay);
+const __homeBtn = $("homeBtn");
+if(__homeBtn){
+  __homeBtn.addEventListener("click", ()=>{
+    showHome();
+    try{ renderChapterCards(); }catch(_){ }
+    try{ renderDailyUI(); }catch(_){ }
+    try{ renderChallengeHint(); }catch(_){ }
+    try{ updateContinueHint(); }catch(_){ }
+  });
+}
+
 $("openMapBtn").addEventListener("click", openOverlay);
 $("closeOverlayBtn").addEventListener("click", closeOverlay);
 
