@@ -24,8 +24,8 @@
       <div class="hudItem"><span class="hudLabel">XP</span><span id="xpValue" class="hudValue">0</span></div>
       <div class="hudItem"><span class="hudLabel">Racha</span><span id="streakValue" class="hudValue">0</span></div>
       <div class="hudItem"><span class="hudLabel">Nivel</span><span id="playerLevel" class="hudValue">1</span></div>
-      <button id="homeBtn" class="btn" title="Volver al inicio">Inicio</button>
-      <button id="menuBtn" class="btn">Menú</button>
+      <button id="homeBtn" class="btn primary homeBtn" title="Volver al inicio">Inicio</button>
+      <button id="menuBtn" class="btn">Configuración</button>
     </div>
   </header>
 
@@ -50,20 +50,24 @@
       <div class="heroRight">
         <div class="statGrid">
           <div class="stat">
-            <div class="statLabel">Capítulos</div>
-            <div class="statValue">4</div>
+            <div class="statLabel">Progreso</div>
+            <div class="statValue" id="overallPct">0%</div>
+            <div class="statSub" id="overallCount">0/240 completados</div>
           </div>
           <div class="stat">
-            <div class="statLabel">Ejercicios</div>
-            <div class="statValue" id="totalTrain">—</div>
+            <div class="statLabel">Capítulo actual</div>
+            <div class="statValue" id="currentChapter">—</div>
+            <div class="statSub" id="currentChapterPct">—</div>
           </div>
           <div class="stat">
             <div class="statLabel">Exámenes</div>
-            <div class="statValue" id="totalExams">—</div>
+            <div class="statValue" id="examsCompleted">0/3</div>
+            <div class="statSub" id="examItemsDone">0/75 incisos</div>
           </div>
           <div class="stat">
             <div class="statLabel">Python</div>
             <div class="statValue" id="pyStatus">Cargando…</div>
+            <div class="statSub" id="pySub">Ejecución en navegador</div>
           </div>
         </div>
       </div>
@@ -145,12 +149,12 @@
   </main>
 
   <!-- MENU / MAP OVERLAY -->
-  <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Menú">
+  <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Configuración">
     <div class="overlayCard card">
       <div class="overlayHeader">
         <div>
-          <div class="chip">Menú</div>
-          <h2>Mapa y configuración</h2>
+          <div class="chip">Configuración</div>
+          <h2>Configuración</h2>
           <div class="small muted">Ruta guiada, práctica libre, exámenes y perfil.</div>
         </div>
         <button id="closeOverlayBtn" class="btn">Cerrar</button>
@@ -187,32 +191,15 @@
             <button id="restartCampaignBtn" class="btn danger">Reiniciar ruta</button>
           </div>
         </div>
-
-        <div class="panel">
-          <div class="panelTitle">Práctica por tema</div>
-          <div class="small muted">Elige capítulo y tema.</div>
-
+<div class="panel">
+          <div class="panelTitle">Accesos</div>
+          <div class="small muted">Atajos a práctica y exámenes.</div>
           <div class="row">
-            <label class="small muted">Capítulo</label>
-            <select id="chapterSelect"></select>
+            <button id="openTopicOverlayBtn" class="btn">Práctica por tema</button>
           </div>
           <div class="row">
-            <label class="small muted">Tema</label>
-            <select id="topicSelect"></select>
+            <button id="openExamOverlayBtn" class="btn">Exámenes</button>
           </div>
-          <button id="startTopicBtn" class="btn">Iniciar práctica</button>
-        </div>
-
-        <div class="panel">
-          <div class="panelTitle">Exámenes</div>
-          <div class="small muted">1 intento por inciso, sin retroalimentación.</div>
-
-          <div class="row">
-            <label class="small muted">Examen</label>
-            <select id="examSelect"></select>
-          </div>
-          <button id="startExamBtn" class="btn">Entrar al examen</button>
-          <div class="small muted" id="examNote"></div>
         </div>
 
         <div class="panel">
@@ -234,7 +221,77 @@
   </div>
 
   <!-- ONBOARDING / PROFILE -->
-  <div id="profileOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Perfil">
+  <!-- PRACTICE OVERLAY -->
+<div id="topicOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Práctica por tema">
+  <div class="overlayCard card">
+    <div class="overlayHeader">
+      <div>
+        <div class="chip">Práctica</div>
+        <h2>Práctica por tema</h2>
+        <div class="small muted">Selecciona capítulo y tema.</div>
+      </div>
+      <button id="closeTopicOverlayBtn" class="btn ghost">Cerrar</button>
+    </div>
+
+    <div class="overlayGrid">
+      <div class="panel">
+        <div class="panelTitle">Selección</div>
+
+        <div class="row">
+          <label class="small muted">Capítulo</label>
+          <select id="chapterSelect"></select>
+        </div>
+        <div class="row">
+          <label class="small muted">Tema</label>
+          <select id="topicSelect"></select>
+        </div>
+
+        <button id="startTopicBtn" class="btn primary">Iniciar práctica</button>
+      </div>
+      <div class="panel">
+        <div class="panelTitle">Notas</div>
+        <div class="small muted">
+          Se reanuda automáticamente desde el primer ejercicio no completado del tema seleccionado.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXAM OVERLAY -->
+<div id="examOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Exámenes">
+  <div class="overlayCard card">
+    <div class="overlayHeader">
+      <div>
+        <div class="chip">Exámenes</div>
+        <h2>Exámenes</h2>
+        <div class="small muted">Un intento por inciso. Sin retroalimentación inmediata.</div>
+      </div>
+      <button id="closeExamOverlayBtn" class="btn ghost">Cerrar</button>
+    </div>
+
+    <div class="overlayGrid">
+      <div class="panel">
+        <div class="panelTitle">Selección</div>
+        <div class="row">
+          <label class="small muted">Examen</label>
+          <select id="examSelect"></select>
+        </div>
+        <div class="small muted" id="examNote"></div>
+        <button id="startExamBtn" class="btn primary">Entrar al examen</button>
+      </div>
+      <div class="panel">
+        <div class="panelTitle">Reglas</div>
+        <div class="small muted">
+          En Ruta guiada, algunos exámenes pueden estar bloqueados hasta completar el porcentaje requerido del capítulo.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="profileOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Perfil">
     <div class="overlayCard card">
       <div class="overlayHeader">
         <div>

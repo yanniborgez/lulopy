@@ -80,8 +80,7 @@ async function loadData(){
   exams = await (await fetch("exams.json")).json();
   dailyBank = await (await fetch("daily_bank.json")).json();
   challengeBank = await (await fetch("challenge_bank.json")).json();
-  $("totalTrain").textContent = String(trainBank.length);
-  $("totalExams").textContent = String(new Set(exams.map(x => x.exam_id)).size);
+  updateProgressSummary();
 }
 
 const CHAPTERS = [
@@ -239,6 +238,48 @@ function showHome(){
   $("gameScreen").classList.add("hidden");
 }
 
+function updateProgressSummary(){
+  try{
+    const total = (trainBank?.length || 0);
+    const done = Object.values(progress.trainDone || {}).filter(v => v && v.ok).length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    const elPct = $("overallPct"); if(elPct) elPct.textContent = `${pct}%`;
+    const elCount = $("overallCount"); if(elCount) elCount.textContent = `${done}/${total} completados`;
+
+    // Current chapter: first incomplete, otherwise last
+    let current = CHAPTERS[0];
+    for(const ch of CHAPTERS){
+      const pr = chapterProgress(ch.id);
+      if(pr.done < pr.total){ current = ch; break; }
+      current = ch;
+    }
+    const prc = chapterProgress(current.id);
+    const elCh = $("currentChapter"); if(elCh) elCh.textContent = `${current.id}/4`;
+    const elChPct = $("currentChapterPct"); if(elChPct) elChPct.textContent = `${prc.done}/${prc.total} (${prc.pct}%)`;
+
+    // Exams completion
+    const byExam = {};
+    for(const item of (exams || [])){
+      const rec = progress.examDone?.[item.id];
+      if(rec?.attempts){
+        byExam[item.exam_id] = (byExam[item.exam_id] || 0) + 1;
+      }
+    }
+    const examIds = Array.from(new Set((exams || []).map(x=>x.exam_id)));
+    let completedExams = 0;
+    let totalExamItems = (exams || []).length;
+    let attemptedExamItems = Object.values(progress.examDone || {}).filter(v => v?.attempts).length;
+
+    for(const exId of examIds){
+      const needed = (exams || []).filter(x => x.exam_id === exId).length;
+      const have = byExam[exId] || 0;
+      if(needed && have >= needed) completedExams += 1;
+    }
+    const elEC = $("examsCompleted"); if(elEC) elEC.textContent = `${completedExams}/${examIds.length || 0}`;
+    const elEI = $("examItemsDone"); if(elEI) elEI.textContent = `${attemptedExamItems}/${totalExamItems} incisos`;
+  }catch(_){}
+}
+
 function renderHomeAll(){
   try{
     renderChapterCards();
@@ -251,6 +292,9 @@ function renderHomeAll(){
   }catch(_){}
   try{
     updateContinueHint();
+  }catch(_){}
+  try{
+    updateProgressSummary();
   }catch(_){}
 }
 
@@ -307,13 +351,35 @@ function closeNarrative(){}
 
 function openOverlay(){
   $("overlay").classList.remove("hidden");
-  refreshTopics();
-  updateExamNote();
   syncSettingsUI();
 }
+
 function closeOverlay(){
   $("overlay").classList.add("hidden");
 }
+
+function openTopicOverlay(chId=null){
+  $("topicOverlay").classList.remove("hidden");
+  if(chId !== null){
+    $("chapterSelect").value = String(chId);
+  }
+  refreshTopics();
+}
+function closeTopicOverlay(){
+  $("topicOverlay").classList.add("hidden");
+}
+function openExamOverlay(exId=null){
+  $("examOverlay").classList.remove("hidden");
+  if(exId){
+    $("examSelect").value = exId;
+  }
+  updateExamNote();
+}
+function closeExamOverlay(){
+  $("examOverlay").classList.add("hidden");
+}
+
+
 
 let profileMustSave = false;
 function openProfileOverlay(mustSave=false){
@@ -511,14 +577,10 @@ function renderChapterCards(){
 
     card.querySelector("[data-action='continue']").addEventListener("click", ()=> startCampaign(ch.id));
     card.querySelector("[data-action='practice']").addEventListener("click", ()=>{
-      openOverlay();
-      $("chapterSelect").value = String(ch.id);
-      refreshTopics();
+      openTopicOverlay(ch.id);
     });
     card.querySelector("[data-action='exam']").addEventListener("click", ()=>{
-      openOverlay();
-      $("examSelect").value = suggested;
-      updateExamNote();
+      openExamOverlay(suggested);
     });
 
     root.appendChild(card);
@@ -1009,6 +1071,8 @@ function updateExamNote(){
 }
 
 $("menuBtn").addEventListener("click", openOverlay);
+const __ot = $("openTopicOverlayBtn"); if(__ot) __ot.addEventListener("click", ()=>{ closeOverlay(); openTopicOverlay(null); });
+const __oe = $("openExamOverlayBtn"); if(__oe) __oe.addEventListener("click", ()=>{ closeOverlay(); openExamOverlay(null); });
 const __homeBtn = $("homeBtn");
 if(__homeBtn){
   __homeBtn.addEventListener("click", ()=>{
@@ -1022,6 +1086,8 @@ if(__homeBtn){
 
 $("openMapBtn").addEventListener("click", openOverlay);
 $("closeOverlayBtn").addEventListener("click", closeOverlay);
+const __cto = $("closeTopicOverlayBtn"); if(__cto) __cto.addEventListener("click", closeTopicOverlay);
+const __ceo = $("closeExamOverlayBtn"); if(__ceo) __ceo.addEventListener("click", closeExamOverlay);
 
 $("continueBtn").addEventListener("click", resumeLast);
 $("newGameBtn").addEventListener("click", ()=>{
@@ -1050,14 +1116,14 @@ $("chapterSelect").addEventListener("change", refreshTopics);
 $("startTopicBtn").addEventListener("click", ()=>{
   const chId = Number($("chapterSelect").value);
   const top = $("topicSelect").value;
-  closeOverlay();
+  closeTopicOverlay();
   startTopic(chId, top);
 });
 
 $("examSelect").addEventListener("change", updateExamNote);
 $("startExamBtn").addEventListener("click", ()=>{
   const exId = $("examSelect").value;
-  closeOverlay();
+  closeExamOverlay();
   startExam(exId);
 });
 

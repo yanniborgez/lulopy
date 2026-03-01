@@ -376,3 +376,8 @@ select{
 .panel{ gap: 8px; padding: 12px; }
 .row{ gap: 4px; }
 select, .textInput{ padding: 8px 10px; }
+
+
+.statSub{ font-size: 12px; color: rgba(255,255,255,.7); margin-top: 6px; }
+
+.homeBtn{ box-shadow: 0 0 0 1px rgba(46,204,113,.35) inset; }
