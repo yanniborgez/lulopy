@@ -1,0 +1,2774 @@
+[
+  {
+    "id": "L1-001",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En una bitácora de auditoría, cada evento debe quedar en su propio renglón. ¿Qué hace print() por defecto al final?",
+    "choices": [
+      "Agrega salto de línea (\\n)",
+      "No agrega nada",
+      "Agrega un espacio"
+    ],
+    "answer": "Agrega salto de línea (\\n)",
+    "explanation": "Si no cambias end=..., print termina con un salto de línea."
+  },
+  {
+    "id": "L1-002",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Necesitas que dos prints queden pegados (sin salto) para formar un identificador. ¿Qué parámetro ajustas?",
+    "choices": [
+      "end",
+      "sep",
+      "type"
+    ],
+    "answer": "end",
+    "explanation": ""
+  },
+  {
+    "id": "L1-003",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Se detectó un literal sin comillas en el reporte. ¿Qué riesgo es más probable?",
+    "choices": [
+      "Error de sintaxis/identificador",
+      "Se imprime igual",
+      "Python lo corrige"
+    ],
+    "answer": "Error de sintaxis/identificador",
+    "explanation": ""
+  },
+  {
+    "id": "L1-004",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué símbolo inicia un comentario de una sola línea?",
+    "choices": [
+      "#",
+      "//",
+      "/* */"
+    ],
+    "answer": "#",
+    "explanation": ""
+  },
+  {
+    "id": "L1-005",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué comando ejecuta un archivo llamado auditoria.py en consola?",
+    "choices": [
+      "python auditoria.py",
+      "run auditoria.py",
+      "audit auditoria.py"
+    ],
+    "answer": "python auditoria.py",
+    "explanation": ""
+  },
+  {
+    "id": "L1-006",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué imprime?\nprint('A', end=''); print('B')",
+    "choices": [
+      "AB",
+      "A B",
+      "A\\nB"
+    ],
+    "answer": "AB",
+    "explanation": ""
+  },
+  {
+    "id": "L1-007",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En impresión de reportes, ¿qué controla el parámetro sep de print()?",
+    "choices": [
+      "Separador entre argumentos",
+      "Final de línea",
+      "Tipo de variable"
+    ],
+    "answer": "Separador entre argumentos",
+    "explanation": ""
+  },
+  {
+    "id": "L1-008",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para insertar un salto de línea en un string, ¿qué escape usas?",
+    "choices": [
+      "\\n",
+      "\\t",
+      "\\\\"
+    ],
+    "answer": "\\n",
+    "explanation": ""
+  },
+  {
+    "id": "L1-009",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para imprimir un backslash (\\) dentro de un string, ¿qué escape usas?",
+    "choices": [
+      "\\\\",
+      "\\n",
+      "\\\""
+    ],
+    "answer": "\\\\",
+    "explanation": ""
+  },
+  {
+    "id": "L1-010",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "La indentación en Python no es decorativa: principalmente…",
+    "choices": [
+      "Define bloques de código",
+      "Mejora rendimiento",
+      "Hace strings multilínea"
+    ],
+    "answer": "Define bloques de código",
+    "explanation": ""
+  },
+  {
+    "id": "L1-011",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Dos statements en una línea sin separador provocan…",
+    "choices": [
+      "SyntaxError",
+      "Warning",
+      "Nada"
+    ],
+    "answer": "SyntaxError",
+    "explanation": ""
+  },
+  {
+    "id": "L1-012",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para salir del intérprete interactivo, lo visto es…",
+    "choices": [
+      "exit()",
+      "close()",
+      "stop()"
+    ],
+    "answer": "exit()",
+    "explanation": ""
+  },
+  {
+    "id": "L1-013",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: parámetro de print que controla el final de la impresión.",
+    "answer": "end",
+    "explanation": ""
+  },
+  {
+    "id": "L1-014",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: símbolo para comentario en Python.",
+    "answer": "#",
+    "explanation": ""
+  },
+  {
+    "id": "L1-015",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: extensión estándar de archivos Python (sin punto).",
+    "answer": "py",
+    "explanation": ""
+  },
+  {
+    "id": "L1-016",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape sequence para nueva línea.",
+    "answer": "\\n",
+    "explanation": ""
+  },
+  {
+    "id": "L1-017",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape sequence para tabulación.",
+    "answer": "\\t",
+    "explanation": ""
+  },
+  {
+    "id": "L1-018",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape para comilla doble dentro de comillas dobles.",
+    "answer": "\\\"",
+    "explanation": ""
+  },
+  {
+    "id": "L1-019",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función usada para imprimir salida.",
+    "answer": "print",
+    "explanation": ""
+  },
+  {
+    "id": "L1-020",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: comando para salir del intérprete.",
+    "answer": "exit()",
+    "explanation": ""
+  },
+  {
+    "id": "L1-021",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: palabra que inicia una condición simple (vista en ejemplo).",
+    "answer": "if",
+    "explanation": ""
+  },
+  {
+    "id": "L1-022",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: ¿qué error aparece explícitamente en el tutorial cuando falta indentación?",
+    "answer": "SyntaxError",
+    "explanation": ""
+  },
+  {
+    "id": "L1-023",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: si quieres separar argumentos por ' | ', ¿qué parámetro de print usarías? (solo el nombre)",
+    "answer": "sep",
+    "explanation": ""
+  },
+  {
+    "id": "L1-024",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: ¿cuál es el separador por defecto entre argumentos de print()? (escribe la palabra)",
+    "answer": "espacio",
+    "explanation": ""
+  },
+  {
+    "id": "L1-025",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 01: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000001\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\n[CIERRA] expediente 000001",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000001\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\n[CIERRA] expediente 000001\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-026",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 01: Imprime en UNA sola línea exactamente: ALERTA[000001]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000001]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-027",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 01: Imprime exactamente: MONTO=1250.50\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=1250.50\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-028",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 02: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000002\nRFC: XAXX010101000\nUUID: 9F8E-7D6C\n[CIERRA] expediente 000002",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000002\nRFC: XAXX010101000\nUUID: 9F8E-7D6C\n[CIERRA] expediente 000002\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-029",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 02: Imprime en UNA sola línea exactamente: ALERTA[000002]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000002]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-030",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 02: Imprime exactamente: MONTO=999.99\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=999.99\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-031",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 03: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000003\nRFC: AAA010101AAA\nUUID: DEAD-BEEF\n[CIERRA] expediente 000003",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000003\nRFC: AAA010101AAA\nUUID: DEAD-BEEF\n[CIERRA] expediente 000003\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-032",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 03: Imprime en UNA sola línea exactamente: ALERTA[000003]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000003]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-033",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 03: Imprime exactamente: MONTO=1500.00\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=1500.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-034",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 04: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000004\nRFC: BEML920313AB3\nUUID: C0DE-2024\n[CIERRA] expediente 000004",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000004\nRFC: BEML920313AB3\nUUID: C0DE-2024\n[CIERRA] expediente 000004\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-035",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 04: Imprime en UNA sola línea exactamente: ALERTA[000004]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000004]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-036",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 04: Imprime exactamente: MONTO=42.42\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=42.42\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-037",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 05: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000005\nRFC: GODE561231GR8\nUUID: FACE-FEED\n[CIERRA] expediente 000005",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000005\nRFC: GODE561231GR8\nUUID: FACE-FEED\n[CIERRA] expediente 000005\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-038",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 05: Imprime en UNA sola línea exactamente: ALERTA[000005]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000005]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-039",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 05: Imprime exactamente: MONTO=10000.00\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=10000.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-040",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 06: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000006\nRFC: COSC8001137NA\nUUID: BADA-55E1\n[CIERRA] expediente 000006",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000006\nRFC: COSC8001137NA\nUUID: BADA-55E1\n[CIERRA] expediente 000006\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-041",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 06: Imprime en UNA sola línea exactamente: ALERTA[000006]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000006]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-042",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 06: Imprime exactamente: MONTO=1160.00\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=1160.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-043",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 07: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000007\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\n[CIERRA] expediente 000007",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000007\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\n[CIERRA] expediente 000007\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-044",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 07: Imprime en UNA sola línea exactamente: ALERTA[000007]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000007]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-045",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 07: Imprime exactamente: MONTO=314.15\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=314.15\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-046",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 08: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000008\nRFC: XAXX010101000\nUUID: 9F8E-7D6C\n[CIERRA] expediente 000008",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000008\nRFC: XAXX010101000\nUUID: 9F8E-7D6C\n[CIERRA] expediente 000008\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-047",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 08: Imprime en UNA sola línea exactamente: ALERTA[000008]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000008]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-048",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 08: Imprime exactamente: MONTO=808.08\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=808.08\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-049",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 09: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000009\nRFC: AAA010101AAA\nUUID: DEAD-BEEF\n[CIERRA] expediente 000009",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000009\nRFC: AAA010101AAA\nUUID: DEAD-BEEF\n[CIERRA] expediente 000009\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-050",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 09: Imprime en UNA sola línea exactamente: ALERTA[000009]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000009]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-051",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 09: Imprime exactamente: MONTO=1250.50\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=1250.50\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-052",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 10: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000010\nRFC: BEML920313AB3\nUUID: C0DE-2024\n[CIERRA] expediente 000010",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000010\nRFC: BEML920313AB3\nUUID: C0DE-2024\n[CIERRA] expediente 000010\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-053",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 10: Imprime en UNA sola línea exactamente: ALERTA[000010]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000010]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-054",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 10: Imprime exactamente: MONTO=999.99\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=999.99\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-055",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 11: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000011\nRFC: GODE561231GR8\nUUID: FACE-FEED\n[CIERRA] expediente 000011",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000011\nRFC: GODE561231GR8\nUUID: FACE-FEED\n[CIERRA] expediente 000011\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-056",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 11: Imprime en UNA sola línea exactamente: ALERTA[000011]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000011]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-057",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 11: Imprime exactamente: MONTO=1500.00\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=1500.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-058",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 12: Imprime exactamente estas 4 líneas:\n[ABRE] expediente 000012\nRFC: COSC8001137NA\nUUID: BADA-55E1\n[CIERRA] expediente 000012",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "[ABRE] expediente 000012\nRFC: COSC8001137NA\nUUID: BADA-55E1\n[CIERRA] expediente 000012\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-059",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 12: Imprime en UNA sola línea exactamente: ALERTA[000012]: RFC vacío\n(usa dos prints y end='')",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ALERTA[000012]: RFC vacío\n",
+    "hint": ""
+  },
+  {
+    "id": "L1-060",
+    "level": 1,
+    "topic": "Protocolos de salida",
+    "type": "code",
+    "points": 18,
+    "prompt": "Caso 12: Imprime exactamente: MONTO=42.42\n(no uses input).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "MONTO=42.42\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-001",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Se recibe monto_str='1500'. Para sumarlo con 200 sin error, primero debes…",
+    "choices": [
+      "Convertir a int/float",
+      "Quitar espacios con strip()",
+      "Usar end=' '"
+    ],
+    "answer": "Convertir a int/float",
+    "explanation": ""
+  },
+  {
+    "id": "L2-002",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué imprime type(3.14)?",
+    "choices": [
+      "<class 'float'>",
+      "<class 'int'>",
+      "<class 'str'>"
+    ],
+    "answer": "<class 'float'>",
+    "explanation": ""
+  },
+  {
+    "id": "L2-003",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué hace int(2.8) según lo visto?",
+    "choices": [
+      "Trunca a 2",
+      "Redondea a 3",
+      "Da error"
+    ],
+    "answer": "Trunca a 2",
+    "explanation": ""
+  },
+  {
+    "id": "L2-004",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué ocurre con print(5 + '5')?",
+    "choices": [
+      "Error por mezclar tipos",
+      "Imprime 10",
+      "Imprime 55"
+    ],
+    "answer": "Error por mezclar tipos",
+    "explanation": ""
+  },
+  {
+    "id": "L2-005",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool(0) evalúa a…",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L2-006",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool('0') evalúa a…",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "explanation": ""
+  },
+  {
+    "id": "L2-007",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué asignación pone el mismo valor en a, b y c?",
+    "choices": [
+      "a=b=c='audit'",
+      "a,b,c='audit'",
+      "a|b|c='audit'"
+    ],
+    "answer": "a=b=c='audit'",
+    "explanation": ""
+  },
+  {
+    "id": "L2-008",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para imprimir texto + número sin TypeError, lo más seguro es…",
+    "choices": [
+      "print('Monto', monto)",
+      "print('Monto'+monto)",
+      "print(monto+'Monto')"
+    ],
+    "answer": "print('Monto', monto)",
+    "explanation": ""
+  },
+  {
+    "id": "L2-009",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "12E4 es un…",
+    "choices": [
+      "float",
+      "int",
+      "str"
+    ],
+    "answer": "float",
+    "explanation": ""
+  },
+  {
+    "id": "L2-010",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "float('3') devuelve…",
+    "choices": [
+      "3.0",
+      "3",
+      "Error"
+    ],
+    "answer": "3.0",
+    "explanation": ""
+  },
+  {
+    "id": "L2-011",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué keyword permite modificar una variable global dentro de una función?",
+    "choices": [
+      "global",
+      "outer",
+      "public"
+    ],
+    "answer": "global",
+    "explanation": ""
+  },
+  {
+    "id": "L2-012",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "¿Qué hace isinstance(x, int)?",
+    "choices": [
+      "Verifica el tipo",
+      "Convierte a int",
+      "Imprime el tipo"
+    ],
+    "answer": "Verifica el tipo",
+    "explanation": ""
+  },
+  {
+    "id": "L2-013",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función que devuelve el tipo de un objeto.",
+    "answer": "type",
+    "explanation": ""
+  },
+  {
+    "id": "L2-014",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: constructor que convierte a entero.",
+    "answer": "int",
+    "explanation": ""
+  },
+  {
+    "id": "L2-015",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: constructor que convierte a float.",
+    "answer": "float",
+    "explanation": ""
+  },
+  {
+    "id": "L2-016",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: constructor que convierte a string.",
+    "answer": "str",
+    "explanation": ""
+  },
+  {
+    "id": "L2-017",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función que evalúa True/False de un valor.",
+    "answer": "bool",
+    "explanation": ""
+  },
+  {
+    "id": "L2-018",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función para validar tipo (nombre).",
+    "answer": "isinstance",
+    "explanation": ""
+  },
+  {
+    "id": "L2-019",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de suma.",
+    "answer": "+",
+    "explanation": ""
+  },
+  {
+    "id": "L2-020",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: tipo de 0.16 (int/float/str).",
+    "answer": "float",
+    "explanation": ""
+  },
+  {
+    "id": "L2-021",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: tipo de '0.16' (int/float/str).",
+    "answer": "str",
+    "explanation": ""
+  },
+  {
+    "id": "L2-022",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: resultado de int('003').",
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": "L2-023",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: keyword para usar/modificar global en función.",
+    "answer": "global",
+    "explanation": ""
+  },
+  {
+    "id": "L2-024",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para formatear 2 decimales en f-string (solo el formato, por ejemplo .2f).",
+    "answer": ".2f",
+    "explanation": ""
+  },
+  {
+    "id": "L2-025",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 01: Crea subtotal=1000 y tasa=0.16. Calcula total y imprime EXACTO: total=1160.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1160.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-026",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 01: Convierte monto_str='001000' a int y luego imprime EXACTO: monto=1000",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1000\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-027",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 02: Crea subtotal=1500 y tasa=0.08. Calcula total y imprime EXACTO: total=1620.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1620.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-028",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 02: Convierte monto_str='001500' a int y luego imprime EXACTO: monto=1500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1500\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-029",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 03: Crea subtotal=999 y tasa=0.1. Calcula total y imprime EXACTO: total=1098.90",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1098.90\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-030",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 03: Convierte monto_str='00999' a int y luego imprime EXACTO: monto=999",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=999\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-031",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 04: Crea subtotal=2500 y tasa=0.04. Calcula total y imprime EXACTO: total=2600.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=2600.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-032",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 04: Convierte monto_str='002500' a int y luego imprime EXACTO: monto=2500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=2500\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-033",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 05: Crea subtotal=42 y tasa=0.16. Calcula total y imprime EXACTO: total=48.72",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=48.72\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-034",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 05: Convierte monto_str='0042' a int y luego imprime EXACTO: monto=42",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=42\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-035",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 06: Crea subtotal=10000 y tasa=0.08. Calcula total y imprime EXACTO: total=10800.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=10800.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-036",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 06: Convierte monto_str='0010000' a int y luego imprime EXACTO: monto=10000",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=10000\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-037",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 07: Crea subtotal=314 y tasa=0.1. Calcula total y imprime EXACTO: total=345.40",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=345.40\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-038",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 07: Convierte monto_str='00314' a int y luego imprime EXACTO: monto=314",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=314\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-039",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 08: Crea subtotal=1000 y tasa=0.04. Calcula total y imprime EXACTO: total=1040.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1040.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-040",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 08: Convierte monto_str='001000' a int y luego imprime EXACTO: monto=1000",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1000\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-041",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 09: Crea subtotal=1500 y tasa=0.16. Calcula total y imprime EXACTO: total=1740.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1740.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-042",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 09: Convierte monto_str='001500' a int y luego imprime EXACTO: monto=1500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1500\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-043",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 10: Crea subtotal=999 y tasa=0.08. Calcula total y imprime EXACTO: total=1078.92",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1078.92\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-044",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 10: Convierte monto_str='00999' a int y luego imprime EXACTO: monto=999",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=999\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-045",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 11: Crea subtotal=2500 y tasa=0.1. Calcula total y imprime EXACTO: total=2750.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=2750.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-046",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 11: Convierte monto_str='002500' a int y luego imprime EXACTO: monto=2500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=2500\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-047",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 12: Crea subtotal=42 y tasa=0.04. Calcula total y imprime EXACTO: total=43.68",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=43.68\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-048",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 12: Convierte monto_str='0042' a int y luego imprime EXACTO: monto=42",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=42\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-049",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 13: Crea subtotal=10000 y tasa=0.16. Calcula total y imprime EXACTO: total=11600.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=11600.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-050",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 13: Convierte monto_str='0010000' a int y luego imprime EXACTO: monto=10000",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=10000\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-051",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 14: Crea subtotal=314 y tasa=0.08. Calcula total y imprime EXACTO: total=339.12",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=339.12\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-052",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 14: Convierte monto_str='00314' a int y luego imprime EXACTO: monto=314",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=314\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-053",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 15: Crea subtotal=1000 y tasa=0.1. Calcula total y imprime EXACTO: total=1100.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1100.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-054",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 15: Convierte monto_str='001000' a int y luego imprime EXACTO: monto=1000",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1000\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-055",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 16: Crea subtotal=1500 y tasa=0.04. Calcula total y imprime EXACTO: total=1560.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1560.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-056",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 16: Convierte monto_str='001500' a int y luego imprime EXACTO: monto=1500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=1500\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-057",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 17: Crea subtotal=999 y tasa=0.16. Calcula total y imprime EXACTO: total=1158.84",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=1158.84\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-058",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 17: Convierte monto_str='00999' a int y luego imprime EXACTO: monto=999",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=999\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-059",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 18: Crea subtotal=2500 y tasa=0.08. Calcula total y imprime EXACTO: total=2700.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "total=2700.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L2-060",
+    "level": 2,
+    "topic": "Custodia de cifras",
+    "type": "code",
+    "points": 20,
+    "prompt": "Control 18: Convierte monto_str='002500' a int y luego imprime EXACTO: monto=2500",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "monto=2500\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-001",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para quitar espacios al inicio/fin de un campo, usas:",
+    "choices": [
+      "strip()",
+      "split()",
+      "replace()"
+    ],
+    "answer": "strip()",
+    "explanation": ""
+  },
+  {
+    "id": "L3-002",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para convertir a MAYÚSCULAS, usas:",
+    "choices": [
+      "upper()",
+      "lower()",
+      "casefold()"
+    ],
+    "answer": "upper()",
+    "explanation": ""
+  },
+  {
+    "id": "L3-003",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador para verificar presencia en un string:",
+    "choices": [
+      "in",
+      "has",
+      "contains"
+    ],
+    "answer": "in",
+    "explanation": ""
+  },
+  {
+    "id": "L3-004",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador para verificar ausencia en un string:",
+    "choices": [
+      "not in",
+      "!= in",
+      "not contains"
+    ],
+    "answer": "not in",
+    "explanation": ""
+  },
+  {
+    "id": "L3-005",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "'A|B|C'.split('|')[1] devuelve:",
+    "choices": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "id": "L3-006",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "'Factura#0007'[-4:] devuelve:",
+    "choices": [
+      "0007",
+      "007",
+      "Factura"
+    ],
+    "answer": "0007",
+    "explanation": ""
+  },
+  {
+    "id": "L3-007",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "'IVA=0.16'.split('=')[1] devuelve:",
+    "choices": [
+      "IVA",
+      "0.16",
+      "="
+    ],
+    "answer": "0.16",
+    "explanation": ""
+  },
+  {
+    "id": "L3-008",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "replace(',', '') sobre '1,250.50' hace:",
+    "choices": [
+      "Quita comas",
+      "Quita puntos",
+      "Convierte a float"
+    ],
+    "answer": "Quita comas",
+    "explanation": ""
+  },
+  {
+    "id": "L3-009",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "len('CFDI') es:",
+    "choices": [
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": "L3-010",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "'Hello, World!'[-5:-2] es:",
+    "choices": [
+      "orl",
+      "rld",
+      "Wor"
+    ],
+    "answer": "orl",
+    "explanation": ""
+  },
+  {
+    "id": "L3-011",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Escape para nueva línea:",
+    "choices": [
+      "\\n",
+      "\\t",
+      "\\\\"
+    ],
+    "answer": "\\n",
+    "explanation": ""
+  },
+  {
+    "id": "L3-012",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "'  '.strip() devuelve:",
+    "choices": [
+      "''",
+      "' '",
+      "Error"
+    ],
+    "answer": "''",
+    "explanation": ""
+  },
+  {
+    "id": "L3-013",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para quitar espacios.",
+    "answer": "strip",
+    "explanation": ""
+  },
+  {
+    "id": "L3-014",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para mayúsculas.",
+    "answer": "upper",
+    "explanation": ""
+  },
+  {
+    "id": "L3-015",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para minúsculas.",
+    "answer": "lower",
+    "explanation": ""
+  },
+  {
+    "id": "L3-016",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para reemplazar texto.",
+    "answer": "replace",
+    "explanation": ""
+  },
+  {
+    "id": "L3-017",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para dividir por separador.",
+    "answer": "split",
+    "explanation": ""
+  },
+  {
+    "id": "L3-018",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de presencia.",
+    "answer": "in",
+    "explanation": ""
+  },
+  {
+    "id": "L3-019",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de ausencia (dos palabras).",
+    "answer": "not in",
+    "explanation": ""
+  },
+  {
+    "id": "L3-020",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función para longitud.",
+    "answer": "len",
+    "explanation": ""
+  },
+  {
+    "id": "L3-021",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: símbolo de slicing entre inicio y fin.",
+    "answer": ":",
+    "explanation": ""
+  },
+  {
+    "id": "L3-022",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: separador en clave=valor.",
+    "answer": "=",
+    "explanation": ""
+  },
+  {
+    "id": "L3-023",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape para nueva línea.",
+    "answer": "\\n",
+    "explanation": ""
+  },
+  {
+    "id": "L3-024",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape para comilla doble.",
+    "answer": "\\\"",
+    "explanation": ""
+  },
+  {
+    "id": "L3-025",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 01: Dado linea='RFC=abc010203ab1|UUID=A1B2-C3D4|MONTO=1,250.50|IVA=0.16', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ABC010203AB1\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-026",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 01: Dado raw='  MONTO=1,250.50  ', limpia, elimina comas y muestra EXACTO: 1250.50",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "1250.50\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-027",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 01: Dado s='FOLIO:000001', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000001\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-028",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 02: Dado linea='RFC=xaxx010101000|UUID=9F8E-7D6C|MONTO=999.99|IVA=0.08', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "XAXX010101000\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-029",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 02: Dado raw='  MONTO=999.99  ', limpia, elimina comas y muestra EXACTO: 999.99",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "999.99\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-030",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 02: Dado s='FOLIO:000002', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000002\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-031",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 03: Dado linea='RFC=aaa010101aaa|UUID=DEAD-BEEF|MONTO=1,500.00|IVA=0.1', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "AAA010101AAA\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-032",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 03: Dado raw='  MONTO=1,500.00  ', limpia, elimina comas y muestra EXACTO: 1500.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "1500.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-033",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 03: Dado s='FOLIO:000003', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000003\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-034",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 04: Dado linea='RFC=beml920313ab3|UUID=C0DE-2024|MONTO=42.42|IVA=0.04', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "BEML920313AB3\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-035",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 04: Dado raw='  MONTO=42.42  ', limpia, elimina comas y muestra EXACTO: 42.42",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "42.42\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-036",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 04: Dado s='FOLIO:000004', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000004\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-037",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 05: Dado linea='RFC=gode561231gr8|UUID=FACE-FEED|MONTO=10,000.00|IVA=0.16', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "GODE561231GR8\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-038",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 05: Dado raw='  MONTO=10,000.00  ', limpia, elimina comas y muestra EXACTO: 10000.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "10000.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-039",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 05: Dado s='FOLIO:000005', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000005\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-040",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 06: Dado linea='RFC=cosc8001137na|UUID=BADA-55E1|MONTO=1,160.00|IVA=0.08', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "COSC8001137NA\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-041",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 06: Dado raw='  MONTO=1,160.00  ', limpia, elimina comas y muestra EXACTO: 1160.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "1160.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-042",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 06: Dado s='FOLIO:000006', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000006\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-043",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 07: Dado linea='RFC=abc010203ab1|UUID=A1B2-C3D4|MONTO=314.15|IVA=0.1', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "ABC010203AB1\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-044",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 07: Dado raw='  MONTO=314.15  ', limpia, elimina comas y muestra EXACTO: 314.15",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "314.15\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-045",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 07: Dado s='FOLIO:000007', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000007\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-046",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 08: Dado linea='RFC=xaxx010101000|UUID=9F8E-7D6C|MONTO=808.08|IVA=0.04', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "XAXX010101000\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-047",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 08: Dado raw='  MONTO=808.08  ', limpia, elimina comas y muestra EXACTO: 808.08",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "808.08\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-048",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 08: Dado s='FOLIO:000008', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000008\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-049",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 09: Dado linea='RFC=aaa010101aaa|UUID=DEAD-BEEF|MONTO=1,250.50|IVA=0.16', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "AAA010101AAA\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-050",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 09: Dado raw='  MONTO=1,250.50  ', limpia, elimina comas y muestra EXACTO: 1250.50",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "1250.50\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-051",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 09: Dado s='FOLIO:000009', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000009\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-052",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 10: Dado linea='RFC=beml920313ab3|UUID=C0DE-2024|MONTO=999.99|IVA=0.08', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "BEML920313AB3\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-053",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 10: Dado raw='  MONTO=999.99  ', limpia, elimina comas y muestra EXACTO: 999.99",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "999.99\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-054",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 10: Dado s='FOLIO:000010', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000010\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-055",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 11: Dado linea='RFC=gode561231gr8|UUID=FACE-FEED|MONTO=1,500.00|IVA=0.1', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "GODE561231GR8\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-056",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 11: Dado raw='  MONTO=1,500.00  ', limpia, elimina comas y muestra EXACTO: 1500.00",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "1500.00\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-057",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 11: Dado s='FOLIO:000011', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000011\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-058",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 12: Dado linea='RFC=cosc8001137na|UUID=BADA-55E1|MONTO=42.42|IVA=0.04', imprime SOLO el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "COSC8001137NA\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-059",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 12: Dado raw='  MONTO=42.42  ', limpia, elimina comas y muestra EXACTO: 42.42",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "42.42\n",
+    "hint": ""
+  },
+  {
+    "id": "L3-060",
+    "level": 3,
+    "topic": "Limpieza y parsing",
+    "type": "code",
+    "points": 22,
+    "prompt": "Registro 12: Dado s='FOLIO:000012', imprime el folio usando slicing (6 dígitos).",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "000012\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-001",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool([]) es:",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L4-002",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool(' ') es:",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "explanation": ""
+  },
+  {
+    "id": "L4-003",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool(' '.strip()) es:",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L4-004",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "print(10 == 9) imprime:",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L4-005",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador lógico para exigir ambas condiciones:",
+    "choices": [
+      "and",
+      "or"
+    ],
+    "answer": "and",
+    "explanation": ""
+  },
+  {
+    "id": "L4-006",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador lógico para permitir cualquiera:",
+    "choices": [
+      "or",
+      "and"
+    ],
+    "answer": "or",
+    "explanation": ""
+  },
+  {
+    "id": "L4-007",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para modificar una variable global dentro de función usas:",
+    "choices": [
+      "global",
+      "outer",
+      "public"
+    ],
+    "answer": "global",
+    "explanation": ""
+  },
+  {
+    "id": "L4-008",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "isinstance(x,(int,float)) sirve para:",
+    "choices": [
+      "Validar numérico",
+      "Convertir",
+      "Imprimir"
+    ],
+    "answer": "Validar numérico",
+    "explanation": ""
+  },
+  {
+    "id": "L4-009",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Ausencia de espacios en rfc se valida con:",
+    "choices": [
+      "' ' not in rfc",
+      "' ' in rfc"
+    ],
+    "answer": "' ' not in rfc",
+    "explanation": ""
+  },
+  {
+    "id": "L4-010",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "print(5 > 3) imprime:",
+    "choices": [
+      "True",
+      "False"
+    ],
+    "answer": "True",
+    "explanation": ""
+  },
+  {
+    "id": "L4-011",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool(None) es:",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L4-012",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Si x='a' fuera y x='b' dentro SIN global, fuera queda:",
+    "choices": [
+      "a",
+      "b"
+    ],
+    "answer": "a",
+    "explanation": ""
+  },
+  {
+    "id": "L4-013",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: keyword para global.",
+    "answer": "global",
+    "explanation": ""
+  },
+  {
+    "id": "L4-014",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador ambos.",
+    "answer": "and",
+    "explanation": ""
+  },
+  {
+    "id": "L4-015",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador cualquiera.",
+    "answer": "or",
+    "explanation": ""
+  },
+  {
+    "id": "L4-016",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: igualdad.",
+    "answer": "==",
+    "explanation": ""
+  },
+  {
+    "id": "L4-017",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: mayor que.",
+    "answer": ">",
+    "explanation": ""
+  },
+  {
+    "id": "L4-018",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: menor que.",
+    "answer": "<",
+    "explanation": ""
+  },
+  {
+    "id": "L4-019",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: ausencia (dos palabras).",
+    "answer": "not in",
+    "explanation": ""
+  },
+  {
+    "id": "L4-020",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función truthiness.",
+    "answer": "bool",
+    "explanation": ""
+  },
+  {
+    "id": "L4-021",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función validar tipo.",
+    "answer": "isinstance",
+    "explanation": ""
+  },
+  {
+    "id": "L4-022",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: palabra clave para funciones.",
+    "answer": "def",
+    "explanation": ""
+  },
+  {
+    "id": "L4-023",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: palabra clave para devolver valor.",
+    "answer": "return",
+    "explanation": ""
+  },
+  {
+    "id": "L4-024",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: resultado de bool(0).",
+    "answer": "False",
+    "explanation": ""
+  },
+  {
+    "id": "L4-025",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 01: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'ABC010203AB1'\nrfc_bad = ' ABC010203AB1 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-026",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 01: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 1250.50\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-027",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 01: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-028",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 02: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'XAXX010101000'\nrfc_bad = ' XAXX010101000 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-029",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 02: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 999.99\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-030",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 02: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-031",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 03: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'AAA010101AAA'\nrfc_bad = ' AAA010101AAA '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-032",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 03: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 1500.00\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-033",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 03: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-034",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 04: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'BEML920313AB3'\nrfc_bad = ' BEML920313AB3 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-035",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 04: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 42.42\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-036",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 04: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-037",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 05: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'GODE561231GR8'\nrfc_bad = ' GODE561231GR8 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-038",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 05: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 10000.00\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-039",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 05: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-040",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 06: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'COSC8001137NA'\nrfc_bad = ' COSC8001137NA '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-041",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 06: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 1160.00\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-042",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 06: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-043",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 07: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'ABC010203AB1'\nrfc_bad = ' ABC010203AB1 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-044",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 07: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 314.15\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-045",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 07: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-046",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 08: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'XAXX010101000'\nrfc_bad = ' XAXX010101000 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-047",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 08: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 808.08\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-048",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 08: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-049",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 09: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'AAA010101AAA'\nrfc_bad = ' AAA010101AAA '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-050",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 09: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 1250.50\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-051",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 09: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-052",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 10: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'BEML920313AB3'\nrfc_bad = ' BEML920313AB3 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-053",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 10: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 999.99\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-054",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 10: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-055",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 11: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'GODE561231GR8'\nrfc_bad = ' GODE561231GR8 '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-056",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 11: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 1500.00\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-057",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 11: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-058",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 12: Escribe es_rfc_limpio(rfc): True si rfc es str, no tiene espacios y len(rfc) es 12 o 13.\nImprime el resultado para rfc_ok y rfc_bad (2 líneas).",
+    "starter_code": "rfc_ok = 'COSC8001137NA'\nrfc_bad = ' COSC8001137NA '\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-059",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 26,
+    "prompt": "Regla 12: Escribe es_monto_valido(x): True si x es int o float y x>0.\nImprime el resultado para x1 y x2 (2 líneas).",
+    "starter_code": "x1 = 42.42\nx2 = 0\n\n# Tu código\n",
+    "expected_stdout": "True\nFalse\n",
+    "hint": ""
+  },
+  {
+    "id": "L4-060",
+    "level": 4,
+    "topic": "Validación y control",
+    "type": "code",
+    "points": 22,
+    "prompt": "Regla 12: Declara x='silencio'. Dentro de una función cambia x='activo' usando global. Luego imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_stdout": "activo\n",
+    "hint": ""
+  }
+]

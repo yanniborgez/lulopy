@@ -1,0 +1,896 @@
+[
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-01",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En un reporte, necesitas concatenar sin salto de línea entre dos prints. ¿Qué ajustas?",
+    "choices": [
+      "end",
+      "sep",
+      "type"
+    ],
+    "answer_hash": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-02",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para poder sumar '1500' con 200, el paso correcto es…",
+    "choices": [
+      "convertir a int/float",
+      "usar upper()",
+      "usar split()"
+    ],
+    "answer_hash": "e02b800ae40a902d5b89cc78aee65b64a91f3a1606902e345514011698be7955"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-03",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador para ausencia en texto:",
+    "choices": [
+      "not in",
+      "in",
+      "=="
+    ],
+    "answer_hash": "66e20234a732c6aa325dcfa46268acf7e859d5098b47a7f6c7265b311953ce3d"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-04",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Método para limpiar espacios alrededor:",
+    "choices": [
+      "strip()",
+      "split()",
+      "replace()"
+    ],
+    "answer_hash": "63b87fbd2592b576bfc56f25d99b4bd2a4fad844986f0533f44f33ea19f926b0"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-05",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool([]) evalúa a:",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-06",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Sin global, asignar x dentro de función crea una variable:",
+    "choices": [
+      "local",
+      "global"
+    ],
+    "answer_hash": "25bf8e1a2393f1108d37029b3df5593236c755742ec93465bbafa9b290bddcf6"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-07",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En 'Factura#0007', el slice s[-4:] devuelve:",
+    "choices": [
+      "0007",
+      "007",
+      "Factura"
+    ],
+    "answer_hash": "f15cea39f11dc0371cfb9a4b7b1c38d5c636feb72d70e2759b0e505905ee9d01"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-08",
+    "level": 2,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "isinstance(x,(int,float)) se usa para:",
+    "choices": [
+      "validar numérico",
+      "convertir",
+      "imprimir"
+    ],
+    "answer_hash": "2cdd6cb849a7070f15151ca93a905b0e8dc0b7785e9ffb17c33385bb14898716"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-09",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: keyword para global.\n\n[v2]",
+    "answer_hash": "8001c27439650c5c5a6b4ed94163b5ddeb4476362c71380e613fa20dfffcef50"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-10",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para mayúsculas.\n\n[v2]",
+    "answer_hash": "aee610558292023758a4229ddcf75f167c9904313a83cf795232ed7f7e2131c9"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-11",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para quitar espacios.\n\n[v2]",
+    "answer_hash": "d60384034b77c13c28402a35b432fb2a93a138a839a8f8f4d39d0262fb44651f"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-12",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para dividir texto.",
+    "answer_hash": "ad1a64057f9ab34fecfe3f4ee78660bb0316dbda9370581ffbeb1e8bddf3d598"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-13",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función para longitud.\n\n[v2]",
+    "answer_hash": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-14",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de presencia.\n\n[v2]",
+    "answer_hash": "582967534d0f909d196b97f9e6921342777aea87b46fa52df165389db1fb8ccf"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-15",
+    "level": 2,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape de nueva línea.",
+    "answer_hash": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-16",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: [OK] verificación completada",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "6bccddb5ea1ab99fd61e84af30652cc1cbb0b52214c73d4e562a7246285ce2d1"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-17",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Convierte monto_str='001500' a int e imprime 1500.",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "9f69998560dcfd8016442e0a32e959191df095817a164ce844c64ec5a8b0cc1b"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-18",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "subtotal=1000 y tasa=0.16: imprime 1160.00 con 2 decimales.",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "e2a6cf80b1108c019cc9f9ada13b87d6f5a3460e64eec8780fcd1b845e5a1d02"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-19",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado raw='  MONTO=1,250.50  ', limpia y muestra 1250.50.",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3155cdbf2760bfeae72dbc65959d22b2319f9000413f16b2a90753303daad49b"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-20",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado s='RFC=abc010203ab1', imprime el RFC en MAYÚSCULAS.",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e835d2d58991d7998910e5c17ecf6850e8228f102ca3877793fe5270a24bbad"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-21",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime bool(' '.strip()) (debe ser False).",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-22",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Define es_monto_valido(x) y prueba con 1 y 0 (2 líneas).",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "30130bd8f3dceb49eea2c5779bee789e64d52c0f29e33f03232a8c7264be9697"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-23",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Demuestra global: x='a'; dentro de función cambia a 'b' con global; imprime x.",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-24",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente dos líneas:\nRFC: ABC010203AB1\nMONTO: 1250.50",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "b1169ed61d1196b6286ce472a84cf725d61449adfab29e2ccc5d779f7ddcd968"
+  },
+  {
+    "exam_id": "EXAM-1",
+    "id": "EXAM-1-25",
+    "level": 2,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: ALERTA: IVA fuera de rango",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "816f8f3428bba96271a3fde09a065c65617b97c200bbe92b7a779cfe81d4bd9f"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-01",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En un reporte, necesitas concatenar sin salto de línea entre dos prints. ¿Qué ajustas?\n\n[v2]",
+    "choices": [
+      "end",
+      "sep",
+      "type"
+    ],
+    "answer_hash": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-02",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para poder sumar '1500' con 200, el paso correcto es…\n\n[v2]",
+    "choices": [
+      "convertir a int/float",
+      "usar upper()",
+      "usar split()"
+    ],
+    "answer_hash": "e02b800ae40a902d5b89cc78aee65b64a91f3a1606902e345514011698be7955"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-03",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador para ausencia en texto:\n\n[v2]",
+    "choices": [
+      "not in",
+      "in",
+      "=="
+    ],
+    "answer_hash": "66e20234a732c6aa325dcfa46268acf7e859d5098b47a7f6c7265b311953ce3d"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-04",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Método para limpiar espacios alrededor:\n\n[v2]",
+    "choices": [
+      "strip()",
+      "split()",
+      "replace()"
+    ],
+    "answer_hash": "63b87fbd2592b576bfc56f25d99b4bd2a4fad844986f0533f44f33ea19f926b0"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-05",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool([]) evalúa a:\n\n[v2]",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-06",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Sin global, asignar x dentro de función crea una variable:\n\n[v2]",
+    "choices": [
+      "local",
+      "global"
+    ],
+    "answer_hash": "25bf8e1a2393f1108d37029b3df5593236c755742ec93465bbafa9b290bddcf6"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-07",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En 'Factura#0007', el slice s[-4:] devuelve:\n\n[v2]",
+    "choices": [
+      "0007",
+      "007",
+      "Factura"
+    ],
+    "answer_hash": "f15cea39f11dc0371cfb9a4b7b1c38d5c636feb72d70e2759b0e505905ee9d01"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-08",
+    "level": 3,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "isinstance(x,(int,float)) se usa para:\n\n[v2]",
+    "choices": [
+      "validar numérico",
+      "convertir",
+      "imprimir"
+    ],
+    "answer_hash": "2cdd6cb849a7070f15151ca93a905b0e8dc0b7785e9ffb17c33385bb14898716"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-09",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: keyword para global.\n\n[v3]",
+    "answer_hash": "8001c27439650c5c5a6b4ed94163b5ddeb4476362c71380e613fa20dfffcef50"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-10",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para mayúsculas.\n\n[v3]",
+    "answer_hash": "aee610558292023758a4229ddcf75f167c9904313a83cf795232ed7f7e2131c9"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-11",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para quitar espacios.\n\n[v3]",
+    "answer_hash": "d60384034b77c13c28402a35b432fb2a93a138a839a8f8f4d39d0262fb44651f"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-12",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para dividir texto.\n\n[v2]",
+    "answer_hash": "ad1a64057f9ab34fecfe3f4ee78660bb0316dbda9370581ffbeb1e8bddf3d598"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-13",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función para longitud.\n\n[v3]",
+    "answer_hash": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-14",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de presencia.\n\n[v3]",
+    "answer_hash": "582967534d0f909d196b97f9e6921342777aea87b46fa52df165389db1fb8ccf"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-15",
+    "level": 3,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape de nueva línea.\n\n[v2]",
+    "answer_hash": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-16",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: [OK] verificación completada\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "6bccddb5ea1ab99fd61e84af30652cc1cbb0b52214c73d4e562a7246285ce2d1"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-17",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Convierte monto_str='001500' a int e imprime 1500.\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "9f69998560dcfd8016442e0a32e959191df095817a164ce844c64ec5a8b0cc1b"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-18",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "subtotal=1000 y tasa=0.16: imprime 1160.00 con 2 decimales.\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "e2a6cf80b1108c019cc9f9ada13b87d6f5a3460e64eec8780fcd1b845e5a1d02"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-19",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado raw='  MONTO=1,250.50  ', limpia y muestra 1250.50.\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3155cdbf2760bfeae72dbc65959d22b2319f9000413f16b2a90753303daad49b"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-20",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado s='RFC=abc010203ab1', imprime el RFC en MAYÚSCULAS.\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e835d2d58991d7998910e5c17ecf6850e8228f102ca3877793fe5270a24bbad"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-21",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime bool(' '.strip()) (debe ser False).\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-22",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Define es_monto_valido(x) y prueba con 1 y 0 (2 líneas).\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "30130bd8f3dceb49eea2c5779bee789e64d52c0f29e33f03232a8c7264be9697"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-23",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Demuestra global: x='a'; dentro de función cambia a 'b' con global; imprime x.\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-24",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente dos líneas:\nRFC: ABC010203AB1\nMONTO: 1250.50\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "b1169ed61d1196b6286ce472a84cf725d61449adfab29e2ccc5d779f7ddcd968"
+  },
+  {
+    "exam_id": "EXAM-2",
+    "id": "EXAM-2-25",
+    "level": 3,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: ALERTA: IVA fuera de rango\n\n[v2]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "816f8f3428bba96271a3fde09a065c65617b97c200bbe92b7a779cfe81d4bd9f"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-01",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En un reporte, necesitas concatenar sin salto de línea entre dos prints. ¿Qué ajustas?\n\n[v3]",
+    "choices": [
+      "end",
+      "sep",
+      "type"
+    ],
+    "answer_hash": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-02",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Para poder sumar '1500' con 200, el paso correcto es…\n\n[v3]",
+    "choices": [
+      "convertir a int/float",
+      "usar upper()",
+      "usar split()"
+    ],
+    "answer_hash": "e02b800ae40a902d5b89cc78aee65b64a91f3a1606902e345514011698be7955"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-03",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Operador para ausencia en texto:\n\n[v3]",
+    "choices": [
+      "not in",
+      "in",
+      "=="
+    ],
+    "answer_hash": "66e20234a732c6aa325dcfa46268acf7e859d5098b47a7f6c7265b311953ce3d"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-04",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Método para limpiar espacios alrededor:\n\n[v3]",
+    "choices": [
+      "strip()",
+      "split()",
+      "replace()"
+    ],
+    "answer_hash": "63b87fbd2592b576bfc56f25d99b4bd2a4fad844986f0533f44f33ea19f926b0"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-05",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "bool([]) evalúa a:\n\n[v3]",
+    "choices": [
+      "False",
+      "True"
+    ],
+    "answer_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-06",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "Sin global, asignar x dentro de función crea una variable:\n\n[v3]",
+    "choices": [
+      "local",
+      "global"
+    ],
+    "answer_hash": "25bf8e1a2393f1108d37029b3df5593236c755742ec93465bbafa9b290bddcf6"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-07",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "En 'Factura#0007', el slice s[-4:] devuelve:\n\n[v3]",
+    "choices": [
+      "0007",
+      "007",
+      "Factura"
+    ],
+    "answer_hash": "f15cea39f11dc0371cfb9a4b7b1c38d5c636feb72d70e2759b0e505905ee9d01"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-08",
+    "level": 4,
+    "topic": "Examen",
+    "type": "mcq",
+    "points": 10,
+    "prompt": "isinstance(x,(int,float)) se usa para:\n\n[v3]",
+    "choices": [
+      "validar numérico",
+      "convertir",
+      "imprimir"
+    ],
+    "answer_hash": "2cdd6cb849a7070f15151ca93a905b0e8dc0b7785e9ffb17c33385bb14898716"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-09",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: keyword para global.\n\n[v4]",
+    "answer_hash": "8001c27439650c5c5a6b4ed94163b5ddeb4476362c71380e613fa20dfffcef50"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-10",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para mayúsculas.\n\n[v4]",
+    "answer_hash": "aee610558292023758a4229ddcf75f167c9904313a83cf795232ed7f7e2131c9"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-11",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para quitar espacios.\n\n[v4]",
+    "answer_hash": "d60384034b77c13c28402a35b432fb2a93a138a839a8f8f4d39d0262fb44651f"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-12",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: método para dividir texto.\n\n[v3]",
+    "answer_hash": "ad1a64057f9ab34fecfe3f4ee78660bb0316dbda9370581ffbeb1e8bddf3d598"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-13",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: función para longitud.\n\n[v4]",
+    "answer_hash": "71fa9faaa6f884aa11f4cea21477b2204a48a4fa7f05cecad00a1250eeeffb4c"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-14",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: operador de presencia.\n\n[v4]",
+    "answer_hash": "582967534d0f909d196b97f9e6921342777aea87b46fa52df165389db1fb8ccf"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-15",
+    "level": 4,
+    "topic": "Fill",
+    "type": "fill",
+    "points": 10,
+    "prompt": "Respuesta corta: escape de nueva línea.\n\n[v3]",
+    "answer_hash": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-16",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: [OK] verificación completada\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "6bccddb5ea1ab99fd61e84af30652cc1cbb0b52214c73d4e562a7246285ce2d1"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-17",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Convierte monto_str='001500' a int e imprime 1500.\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "9f69998560dcfd8016442e0a32e959191df095817a164ce844c64ec5a8b0cc1b"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-18",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "subtotal=1000 y tasa=0.16: imprime 1160.00 con 2 decimales.\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "e2a6cf80b1108c019cc9f9ada13b87d6f5a3460e64eec8780fcd1b845e5a1d02"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-19",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado raw='  MONTO=1,250.50  ', limpia y muestra 1250.50.\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3155cdbf2760bfeae72dbc65959d22b2319f9000413f16b2a90753303daad49b"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-20",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Dado s='RFC=abc010203ab1', imprime el RFC en MAYÚSCULAS.\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e835d2d58991d7998910e5c17ecf6850e8228f102ca3877793fe5270a24bbad"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-21",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime bool(' '.strip()) (debe ser False).\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-22",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Define es_monto_valido(x) y prueba con 1 y 0 (2 líneas).\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "30130bd8f3dceb49eea2c5779bee789e64d52c0f29e33f03232a8c7264be9697"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-23",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Demuestra global: x='a'; dentro de función cambia a 'b' con global; imprime x.\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-24",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente dos líneas:\nRFC: ABC010203AB1\nMONTO: 1250.50\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "b1169ed61d1196b6286ce472a84cf725d61449adfab29e2ccc5d779f7ddcd968"
+  },
+  {
+    "exam_id": "EXAM-3",
+    "id": "EXAM-3-25",
+    "level": 4,
+    "topic": "Código",
+    "type": "code",
+    "points": 26,
+    "prompt": "Imprime exactamente: ALERTA: IVA fuera de rango\n\n[v3]",
+    "starter_code": "# Tu código\n",
+    "expected_hash": "816f8f3428bba96271a3fde09a065c65617b97c200bbe92b7a779cfe81d4bd9f"
+  }
+]

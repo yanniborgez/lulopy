@@ -1,0 +1,902 @@
+[
+  {
+    "id": "R-001",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 001 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-002",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 002 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-003",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 003 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-004",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 004 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-005",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 005 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-006",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 006 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-007",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 007 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-008",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 008 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-009",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 009 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-010",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 010 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-011",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 011 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-012",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 012 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-013",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 013 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-014",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 014 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-015",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 015 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-016",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 016 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-017",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 017 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-018",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 018 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-019",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 019 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-020",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 020 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-021",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 021 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-022",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 022 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 808.08\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 808.08\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-023",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 023 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-024",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 024 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 999.99\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 999.99\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-025",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 025 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 250.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 250.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-026",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 026 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-027",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 027 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-028",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 028 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 875.40\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 875.40\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-029",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 029 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 314.15\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 314.15\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-030",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 030 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 42.42\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 42.42\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-031",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 031 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-032",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 032 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 808.08\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 808.08\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-033",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 033 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-034",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 034 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 999.99\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 999.99\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-035",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 035 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 250.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 250.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-036",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 036 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-037",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 037 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-038",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 038 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 875.40\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 875.40\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-039",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 039 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 314.15\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 314.15\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-040",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 040 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 42.42\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 42.42\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-041",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 041 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-042",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 042 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-043",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 043 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-044",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 044 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-045",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 045 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-046",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 046 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-047",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 047 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-048",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 048 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-049",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 049 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-050",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 050 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-051",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 051 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-052",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 052 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-053",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 053 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-054",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 054 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-055",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 055 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-056",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 056 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-057",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 057 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-058",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 058 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-059",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 059 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-060",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 060 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-061",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 061 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-062",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 062 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 808.08\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 808.08\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-063",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 063 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-064",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 064 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 999.99\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 999.99\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-065",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 065 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 250.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 250.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-066",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 066 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-067",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 067 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-068",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 068 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 875.40\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 875.40\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-069",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 069 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 314.15\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 314.15\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-070",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 070 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 42.42\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 42.42\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-071",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 071 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-072",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 072 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 808.08\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 808.08\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-073",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 073 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-074",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 074 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 999.99\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 999.99\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-075",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 075 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 250.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 250.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-076",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 076 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-077",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 077 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-078",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 078 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 875.40\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 875.40\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-079",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 079 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 314.15\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 314.15\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-080",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 080 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 42.42\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 42.42\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-081",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 081 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1250.50,\"iva\":0.16,\"total\":1450.58}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-082",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 082 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 808.08\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":808.08,\"iva\":0.04,\"total\":840.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-083",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 083 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":10000.00,\"iva\":0.1,\"total\":11000.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-084",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 084 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 999.99\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":999.99,\"iva\":0.08,\"total\":1079.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-085",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 085 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 250.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":250.00,\"iva\":0.16,\"total\":290.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-086",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 086 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":1160.00,\"iva\":0.04,\"total\":1206.40}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-087",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 087 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":1500.00,\"iva\":0.1,\"total\":1650.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-088",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 088 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 875.40\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":875.40,\"iva\":0.08,\"total\":945.43}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-089",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 089 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 314.15\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":314.15,\"iva\":0.16,\"total\":364.41}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-090",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 090 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 42.42\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":42.42,\"iva\":0.04,\"total\":44.12}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-091",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 091 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 1,250.50\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":1250.50,\"iva\":0.1,\"total\":1375.55}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-092",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 092 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 808.08\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":808.08,\"iva\":0.08,\"total\":872.73}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-093",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 093 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='BADA-55E1'\\nMONTO=\"$ 10,000.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"BADA-55E1\",\"monto\":10000.00,\"iva\":0.16,\"total\":11600.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-094",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 094 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='DEAD-BEEF'\\nMONTO=\"$ 999.99\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"DEAD-BEEF\",\"monto\":999.99,\"iva\":0.04,\"total\":1039.99}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-095",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 095 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='CAFE-BABE'\\nMONTO=\"$ 250.00\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"CAFE-BABE\",\"monto\":250.00,\"iva\":0.1,\"total\":275.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-096",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 096 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='FACE-FEED'\\nMONTO=\"$ 1,160.00\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"FACE-FEED\",\"monto\":1160.00,\"iva\":0.08,\"total\":1252.80}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-097",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 097 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}",
+    "starter_code": "bloque = '''RFC=\" abc010203ab1 \"\\nUUID='9F8E-7D6C'\\nMONTO=\"$ 1,500.00\"\\nIVA=0.16'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"ABC010203AB1\",\"uuid\":\"9F8E-7D6C\",\"monto\":1500.00,\"iva\":0.16,\"total\":1740.00}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-098",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 098 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}",
+    "starter_code": "bloque = '''RFC=\" aaa010101aaa \"\\nUUID='FEED-C0DE'\\nMONTO=\"$ 875.40\"\\nIVA=0.04'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"AAA010101AAA\",\"uuid\":\"FEED-C0DE\",\"monto\":875.40,\"iva\":0.04,\"total\":910.42}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-099",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 099 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}",
+    "starter_code": "bloque = '''RFC=\" gode561231gr8 \"\\nUUID='C0DE-2024'\\nMONTO=\"$ 314.15\"\\nIVA=0.1'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"GODE561231GR8\",\"uuid\":\"C0DE-2024\",\"monto\":314.15,\"iva\":0.1,\"total\":345.56}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  },
+  {
+    "id": "R-100",
+    "type": "code",
+    "points": 80,
+    "prompt": "Reto del día 100 (difícil, código):\nTienes un bloque de texto con saltos de línea y comillas mezcladas. Sin loops, extrae y normaliza.\n\nBloque:\nRFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08\n\nRequisitos:\n1) RFC: quitar comillas, quitar espacios internos alrededor, convertir a MAYÚSCULAS.\n2) UUID: quitar comillas simples/dobles.\n3) MONTO: quitar '$' y comas, convertir a float.\n4) IVA: mantener como número.\n5) total = monto * (1 + iva)\n6) Imprime EXACTO una sola línea estilo JSON (sin espacios extra):\n{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}",
+    "starter_code": "bloque = '''RFC=\" hulp9801019z9 \"\\nUUID='A1B2-C3D4'\\nMONTO=\"$ 42.42\"\\nIVA=0.08'''\n\n# Tu código\n",
+    "expected_stdout": "{\"rfc\":\"HULP9801019Z9\",\"uuid\":\"A1B2-C3D4\",\"monto\":42.42,\"iva\":0.08,\"total\":45.81}\n",
+    "hint": "Pista: separa por líneas, luego por '=' o ':'; limpia comillas y espacios."
+  }
+]

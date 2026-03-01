@@ -1,0 +1,5 @@
+# No se requiere, pero evita basura común
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

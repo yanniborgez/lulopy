@@ -1,0 +1,902 @@
+[
+  {
+    "id": "D-001",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 001 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000001\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000001'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000001\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-002",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 002 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-003",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 003 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-004",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 004 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000004|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000004'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000004|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-005",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 005 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000005\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000005'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000005\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-006",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 006 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-007",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 007 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-008",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 008 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000008|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000008'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000008|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-009",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 009 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000009] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000009\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000009] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000009'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000009\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-010",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 010 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-011",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 011 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-012",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 012 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000012|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000012'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000012|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-013",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 013 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000013\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000013'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000013\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-014",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 014 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-015",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 015 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-016",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 016 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000016|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000016'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000016|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-017",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 017 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000017\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000017'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000017\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-018",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 018 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-019",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 019 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-020",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 020 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000020|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000020'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000020|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-021",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 021 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000021] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000021\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000021] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000021'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000021\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-022",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 022 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-023",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 023 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-024",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 024 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000024|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000024'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000024|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-025",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 025 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000025\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000025'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000025\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-026",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 026 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-027",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 027 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-028",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 028 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000028|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000028'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000028|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-029",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 029 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000029\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000029'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000029\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-030",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 030 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-031",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 031 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-032",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 032 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000032|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000032'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000032|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-033",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 033 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000033] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000033\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000033] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000033'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000033\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-034",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 034 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-035",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 035 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-036",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 036 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000036|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000036'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000036|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-037",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 037 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000037\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000037'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000037\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-038",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 038 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-039",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 039 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-040",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 040 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000040|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000040'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000040|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-041",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 041 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000041\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000041'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000041\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-042",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 042 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-043",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 043 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-044",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 044 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000044|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000044'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000044|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-045",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 045 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000045] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000045\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000045] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000045'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000045\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-046",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 046 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-047",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 047 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-048",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 048 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000048|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000048'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000048|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-049",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 049 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000049\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000049'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000049\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-050",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 050 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-051",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 051 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-052",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 052 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000052|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000052'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000052|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-053",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 053 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000053\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000053'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000053\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-054",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 054 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-055",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 055 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-056",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 056 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000056|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000056'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000056|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-057",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 057 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000057] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000057\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000057] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000057'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000057\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-058",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 058 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-059",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 059 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-060",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 060 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000060|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000060'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000060|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-061",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 061 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000061\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000061'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000061\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-062",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 062 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-063",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 063 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-064",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 064 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000064|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000064'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000064|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-065",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 065 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000065\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000065'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000065\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-066",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 066 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-067",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 067 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-068",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 068 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000068|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000068'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000068|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-069",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 069 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000069] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000069\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000069] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000069'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000069\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-070",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 070 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-071",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 071 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-072",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 072 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000072|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000072'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000072|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-073",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 073 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000073\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000073'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000073\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-074",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 074 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-075",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 075 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-076",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 076 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000076|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000076'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000076|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-077",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 077 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000077\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:GODE561231GR8||UUID:FACE-FEED||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000077'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000077\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-078",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 078 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-079",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 079 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-080",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 080 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000080|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000080'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000080|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-081",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 081 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000081] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000081\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000081] RFC=ABC010203AB1 ; UUID=A1B2-C3D4 ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000081'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000081\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-082",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 082 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-083",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 083 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-084",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 084 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000084|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000084'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000084|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-085",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 085 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000085\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=gode561231gr8 | UUID = FACE-FEED | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000085'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000085\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-086",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 086 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-087",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 087 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-088",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 088 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000088|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000088'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000088|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-089",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 089 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\nRFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000089\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''RFC:ABC010203AB1||UUID:A1B2-C3D4||MONTO:$ 1,250.50||IVA:0.16'''\nfolio = '000089'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000089\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-090",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 090 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-091",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 091 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-092",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 092 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000092|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000092'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000092|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-093",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 093 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n[000093] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16\n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000093\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''[000093] RFC=GODE561231GR8 ; UUID=FACE-FEED ; MONTO=1,250.50 ; IVA=0.16'''\nfolio = '000093'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000093\nRFC: GODE561231GR8\nUUID: FACE-FEED\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-094",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 094 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'COSC8001137NA'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-095",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 095 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'HULP9801019Z9'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-096",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 096 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000096|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000096'\nrfc = 'mopr750203aa7'\nuuid = 'BADA-55E1'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000096|MOPR750203AA7|BADA-55E1|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-097",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 097 (código largo):\nTienes un registro crudo. Limpia y genera un reporte formal EXACTO.\n\nRegistro:\n  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  \n\nRequisitos:\n1) Extrae RFC, UUID, MONTO e IVA (sin usar loops).\n2) Normaliza RFC a MAYÚSCULAS y sin espacios.\n3) MONTO debe quedar como número con 2 decimales (sin comas ni signo $).\n4) Calcula TOTAL = MONTO * (1 + IVA).\n5) Imprime exactamente estas líneas:\n\nFOLIO: 000097\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58",
+    "starter_code": "registro = '''  RFC=abc010203ab1 | UUID = A1B2-C3D4 | MONTO = 1,250.50 | IVA=0.16  '''\nfolio = '000097'\n\n# Tu código\n",
+    "expected_stdout": "FOLIO: 000097\nRFC: ABC010203AB1\nUUID: A1B2-C3D4\nMONTO: 1250.50\nIVA: 0.16\nTOTAL: 1450.58\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-098",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 098 (código largo):\nConstruye un verificador mínimo sin loops, usando funciones.\n\nDatos:\nrfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\nRequisitos:\n1) Define una función es_rfc_limpio(x) que regrese True si:\n   - x es str, no contiene espacios, y len(x) es 12 o 13\n2) Convierte monto_texto a float (quita comas).\n3) Calcula total = monto * (1 + iva)\n4) Imprime EXACTO:\n\nRFC_OK: VALIDO\nTOTAL: 1252.80",
+    "starter_code": "rfc = 'XAXX010101000'\nmonto_texto = '1,160.00'\niva = 0.08\n\n# Tu código\n",
+    "expected_stdout": "RFC_OK: VALIDO\nTOTAL: 1252.80\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-099",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 099 (código largo):\nEvalúa el riesgo y emite una instrucción.\n\nEntrada:\nrfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\nRegla:\ntotal = monto * (1 + iva)\nSi total >= 5000.00 imprime REVISION; si no, imprime OK.\n\nLuego imprime también el total con 2 decimales.\n\nSalida EXACTA (2 líneas):\nACCION: OK\nTOTAL: 1375.55",
+    "starter_code": "rfc = 'AAA010101AAA'\nmonto = 1250.50\niva = 0.1\n\n# Tu código\n",
+    "expected_stdout": "ACCION: OK\nTOTAL: 1375.55\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  },
+  {
+    "id": "D-100",
+    "type": "code",
+    "points": 30,
+    "prompt": "Misión diaria 100 (código largo):\nEstandariza una línea para archivo de control.\n\nDatos:\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\nRequisitos:\n1) RFC debe imprimirse en MAYÚSCULAS.\n2) TOTAL = monto * (1 + iva)\n3) Imprime EXACTO una sola línea con el formato:\n000100|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40",
+    "starter_code": "folio = '000100'\nrfc = 'beml920313ab3'\nuuid = '9F8E-7D6C'\nmonto = 1160.00\niva = 0.04\n\n# Tu código\n",
+    "expected_stdout": "000100|BEML920313AB3|9F8E-7D6C|1160.00|0.04|1206.40\n",
+    "hint": "Usa split/replace/strip/upper y conversiones int/float. Evita loops."
+  }
+]

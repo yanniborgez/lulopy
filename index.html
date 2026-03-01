@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuloPy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🐍</div>
+      <div class="brandText">
+        <div class="title">LuloPy</div>
+        <div class="subtitle">Entrenamiento práctico de Python para reporteo, limpieza de datos y validación.</div>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="playerTag" id="playerTag" title="Perfil">
+        <span id="playerEmoji">🕵️</span>
+        <span id="playerName">Jugador</span>
+      </div>
+      <div class="hudItem"><span class="hudLabel">XP</span><span id="xpValue" class="hudValue">0</span></div>
+      <div class="hudItem"><span class="hudLabel">Racha</span><span id="streakValue" class="hudValue">0</span></div>
+      <div class="hudItem"><span class="hudLabel">Nivel</span><span id="playerLevel" class="hudValue">1</span></div>
+      <button id="menuBtn" class="btn">Menú</button>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main id="homeScreen" class="home">
+    <section class="hero card">
+      <div class="heroLeft">
+        <div class="chip" id="modeChip">Ruta guiada</div>
+        <h1>Entrenamiento guiado de Python</h1>
+        <p class="muted">
+          Practica fundamentos, tipos, strings y validación con ejercicios verificables. El progreso se guarda automáticamente en este navegador.
+        </p>
+        <div class="heroActions">
+          <button id="continueBtn" class="btn primary">Continuar</button>
+          <button id="newGameBtn" class="btn">Nueva partida</button>
+          <button id="openMapBtn" class="btn">Mapa</button>
+          <button id="exportBtnHome" class="btn">Exportar progreso</button>
+        </div>
+        <div class="small muted" id="continueHint"></div>
+      </div>
+
+      <div class="heroRight">
+        <div class="statGrid">
+          <div class="stat">
+            <div class="statLabel">Capítulos</div>
+            <div class="statValue">4</div>
+          </div>
+          <div class="stat">
+            <div class="statLabel">Ejercicios</div>
+            <div class="statValue" id="totalTrain">—</div>
+          </div>
+          <div class="stat">
+            <div class="statLabel">Exámenes</div>
+            <div class="statValue" id="totalExams">—</div>
+          </div>
+          <div class="stat">
+            <div class="statLabel">Python</div>
+            <div class="statValue" id="pyStatus">Cargando…</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="twoCols">
+      <div class="card">
+        <div class="cardHeader">
+          <h2>Misiones diarias</h2>
+          <div class="pill" id="dailyDatePill">Hoy</div>
+        </div>
+        <div class="small muted">Dos ejercicios de código (más largos) para reforzar práctica deliberada.</div>
+        <div id="dailyList" class="dailyList"></div>
+        <div class="actions">
+          <button id="startDailyBtn" class="btn primary">Ir a misiones</button>
+          <button id="rerollDailyBtn" class="btn">Re-crear (una vez)</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardHeader">
+          <h2>Reto del día</h2>
+          <div class="pill">1 por día</div>
+        </div>
+        <div class="small muted">Un ejercicio avanzado, disponible una vez al día.</div>
+        <div class="actions">
+          <button id="startChallengeBtn" class="btn primary">Iniciar reto del día</button>
+        </div>
+        <div class="small muted" id="challengeHint"></div>
+      </div>
+    </section>
+
+    <section class="chapters">
+      <h2>Capítulos</h2>
+      <div id="chapterCards" class="chapterCards"></div>
+    </section>
+  </main>
+
+  <!-- GAME -->
+  <main id="gameScreen" class="game hidden">
+    <section class="card">
+      <div class="gameHeader">
+        <div>
+          <div class="chip" id="chipChapter">Capítulo</div>
+          <div class="small muted" id="chipPath">Ruta</div>
+          <h1 id="qTitle">Misión</h1>
+        </div>
+        <div class="gameMeta">
+          <div class="pill" id="pillType">tipo</div>
+          <div class="pill" id="pillPoints">+0 XP</div>
+        </div>
+      </div>
+
+      <div class="progressRow">
+        <div class="progressBar"><div id="progressFill" class="progressFill"></div></div>
+        <div class="small muted"><span id="progressText">0/0</span></div>
+      </div>
+
+      <pre class="prompt" id="prompt"></pre>
+
+      <div id="workspace" class="workspace"></div>
+
+      <div class="actions">
+        <button id="checkBtn" class="btn primary">Revisar</button>
+        <button id="showAnswerBtn" class="btn">Mostrar respuesta</button>
+        <button id="nextBtn" class="btn">Siguiente</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <div class="cardHeader">
+        <h2>Consola</h2>
+        <div class="pill">stdout</div>
+      </div>
+      <pre id="console" class="console"></pre>
+    </section>
+  </main>
+
+  <!-- MENU / MAP OVERLAY -->
+  <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Menú">
+    <div class="overlayCard card">
+      <div class="overlayHeader">
+        <div>
+          <div class="chip">Menú</div>
+          <h2>Mapa y configuración</h2>
+          <div class="small muted">Ruta guiada, práctica libre, exámenes y perfil.</div>
+        </div>
+        <button id="closeOverlayBtn" class="btn">Cerrar</button>
+      </div>
+
+      <div class="overlayGrid">
+        <div class="panel">
+          <div class="panelTitle">Modo de juego</div>
+          <div class="small muted">Ruta guiada bloquea exámenes hasta completar el capítulo.</div>
+          <div class="row">
+            <label class="small muted">Modo</label>
+            <select id="playModeSelect">
+              <option value="guided">Ruta guiada</option>
+              <option value="free">Libre</option>
+            </select>
+          </div>
+          <div class="row">
+            <label class="small muted">Umbral para desbloquear exámenes (Ruta guiada)</label>
+            <select id="unlockPctSelect">
+              <option value="60">60%</option>
+              <option value="70" selected>70%</option>
+              <option value="80">80%</option>
+              <option value="90">90%</option>
+            </select>
+          </div>
+          <button id="saveSettingsBtn" class="btn primary">Guardar</button>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Ruta guiada</div>
+          <div class="small muted">Ruta recomendada (secuencial). Reanuda automáticamente.</div>
+          <div class="panelActions">
+            <button id="resumeCampaignBtn" class="btn primary">Continuar ruta</button>
+            <button id="restartCampaignBtn" class="btn danger">Reiniciar ruta</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Práctica por tema</div>
+          <div class="small muted">Elige capítulo y tema.</div>
+
+          <div class="row">
+            <label class="small muted">Capítulo</label>
+            <select id="chapterSelect"></select>
+          </div>
+          <div class="row">
+            <label class="small muted">Tema</label>
+            <select id="topicSelect"></select>
+          </div>
+          <button id="startTopicBtn" class="btn">Iniciar práctica</button>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Exámenes</div>
+          <div class="small muted">1 intento por inciso, sin retroalimentación.</div>
+
+          <div class="row">
+            <label class="small muted">Examen</label>
+            <select id="examSelect"></select>
+          </div>
+          <button id="startExamBtn" class="btn">Entrar al examen</button>
+          <div class="small muted" id="examNote"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Perfil</div>
+          <div class="small muted">Nombre e ícono.</div>
+          <button id="editProfileBtn" class="btn">Editar perfil</button>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Progreso</div>
+          <div class="small muted">Se guarda automáticamente en este navegador.</div>
+          <div class="panelActions">
+            <button id="exportBtn" class="btn">Exportar progreso</button>
+            <button id="resetBtn" class="btn danger">Reset total</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ONBOARDING / PROFILE -->
+  <div id="profileOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Perfil">
+    <div class="overlayCard card">
+      <div class="overlayHeader">
+        <div>
+          <div class="chip">Perfil</div>
+          <h2>Identificación</h2>
+          <div class="small muted">Se guarda localmente en este navegador.</div>
+        </div>
+        <button id="closeProfileBtn" class="btn">Cerrar</button>
+      </div>
+
+      <div class="overlayGrid oneCol">
+        <div class="panel">
+          <div class="panelTitle">Nombre</div>
+          <input id="nameInput" class="textInput" maxlength="24" placeholder="Escribe tu nombre" />
+          <div class="small muted">Ejemplo: “Ana”, “Carlos”, “Diana”.</div>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Ícono</div>
+          <div class="emojiGrid" id="emojiGrid"></div>
+          <div class="small muted">Elige uno. Puedes cambiarlo después.</div>
+        </div>
+
+        <div class="panelActions">
+          <button id="saveProfileBtn" class="btn primary">Guardar perfil</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Pyodide (requiere internet) -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
