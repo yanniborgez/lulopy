@@ -585,7 +585,7 @@ function renderChapterCards(){
         <button class="btn" data-action="practice">Practicar por tema</button>
         <button class="btn" data-action="exam" ${unlocked ? "" : "disabled"}>${unlocked ? "Examen" : "Examen 🔒"}</button>
       </div>
-      ${(!unlocked && progress.settings.playMode==="guided") ? `<div class="small muted">Bloqueado: completa ≥ ${progress.settings.unlockPct}% para desbloquear.</div>` : ""}
+      ${(!unlocked && progress.settings.playMode==="guided") ? `<div class="small muted">Examen bloqueado: completa ≥ ${progress.settings.unlockPct}% para desbloquear.</div>` : ""}
     `;
 
     card.querySelector("[data-action='continue']").addEventListener("click", ()=> startCampaign(ch.id));
@@ -1089,7 +1089,7 @@ function updateExamNote(){
   const unlocked = isExamUnlocked(exId);
   $("startExamBtn").disabled = !unlocked;
   if(progress.settings.playMode === "guided" && !unlocked){
-    $("examNote").textContent = `${attempted}/${items.length} incisos intentados. 🔒 Bloqueado: completa ≥ ${progress.settings.unlockPct}% del capítulo requerido.`;
+    $("examNote").textContent = `${attempted}/${items.length} incisos intentados. 🔒 Examen bloqueado: completa ≥ ${progress.settings.unlockPct}% del capítulo requerido.`;
   } else {
     $("examNote").textContent = `${attempted}/${items.length} incisos intentados en este navegador.`;
   }
