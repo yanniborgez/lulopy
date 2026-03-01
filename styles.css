@@ -381,3 +381,11 @@ select, .textInput{ padding: 8px 10px; }
 .statSub{ font-size: 12px; color: rgba(255,255,255,.7); margin-top: 6px; }
 
 .homeBtn{ box-shadow: 0 0 0 1px rgba(46,204,113,.35) inset; }
+
+.heroLeft{display:flex; flex-direction:column; gap:10px}
+.heroMetaRow{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.heroActions.compact{margin-top:0}
+.hero{gap:12px; align-items:start}
+.hero .chip{margin:0}
+
+.homeBtn{ font-weight:700; }

@@ -17,15 +17,15 @@
     </div>
 
     <div class="hud">
+      <button id="homeBtn" class="btn primary homeBtn" title="Volver al inicio">Inicio</button>
+<div class="hudItem"><span class="hudLabel">XP</span><span id="xpValue" class="hudValue">0</span></div>
+      <div class="hudItem"><span class="hudLabel">Racha</span><span id="streakValue" class="hudValue">0</span></div>
+      <div class="hudItem"><span class="hudLabel">Nivel</span><span id="playerLevel" class="hudValue">1</span></div>
       <div class="playerTag" id="playerTag" title="Perfil">
         <span id="playerEmoji">🕵️</span>
         <span id="playerName">Jugador</span>
       </div>
-      <div class="hudItem"><span class="hudLabel">XP</span><span id="xpValue" class="hudValue">0</span></div>
-      <div class="hudItem"><span class="hudLabel">Racha</span><span id="streakValue" class="hudValue">0</span></div>
-      <div class="hudItem"><span class="hudLabel">Nivel</span><span id="playerLevel" class="hudValue">1</span></div>
-      <button id="homeBtn" class="btn primary homeBtn" title="Volver al inicio">Inicio</button>
-      <button id="menuBtn" class="btn">Configuración</button>
+<button id="menuBtn" class="btn">Configuración</button>
     </div>
   </header>
 
@@ -33,18 +33,16 @@
   <main id="homeScreen" class="home">
     <section class="hero card">
       <div class="heroLeft">
-        <div class="chip" id="modeChip">Ruta guiada</div>
-        <h1>Entrenamiento guiado de Python</h1>
-        <p class="muted">
-          Practica fundamentos, tipos, strings y validación con ejercicios verificables. El progreso se guarda automáticamente en este navegador.
-        </p>
-        <div class="heroActions">
+        <div class="heroMetaRow">
+          <div class="chip" id="modeChip">Ruta guiada</div>
+          <div class="small muted" id="continueHint"></div>
+        </div>
+        <div class="heroActions compact">
           <button id="continueBtn" class="btn primary">Continuar</button>
           <button id="newGameBtn" class="btn">Nueva partida</button>
           <button id="openMapBtn" class="btn">Mapa</button>
           <button id="exportBtnHome" class="btn">Exportar progreso</button>
         </div>
-        <div class="small muted" id="continueHint"></div>
       </div>
 
       <div class="heroRight">
