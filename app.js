@@ -212,8 +212,10 @@ function updateHUD(){
 
   const name = progress.profile?.name || "Jugador";
   const emoji = progress.profile?.emoji || "🕵️";
-  $("playerName").textContent = name;
-  $("playerEmoji").textContent = emoji;
+  const nameEl = $("playerName");
+  if(nameEl) nameEl.textContent = name;
+  const emojiEl = $("playerEmoji");
+  if(emojiEl) emojiEl.textContent = emoji;
 
   $("modeChip").textContent = (progress.settings.playMode === "guided" ? "Ruta guiada" : "Libre");
 }
