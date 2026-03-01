@@ -57,11 +57,11 @@ async function initPyodide(){
     pyodide.setStdout({batched: (s)=>{ stdoutBuf += s; }});
     pyodide.setStderr({batched: (s)=>{ stderrBuf += s; }});
     pyReady = true;
-    $("pyStatus").textContent = "Listo ✅";
+    $("pyStatus").textContent = "Listo";
   } catch(err){
     pyLoadError = err;
     pyReady = false;
-    $("pyStatus").textContent = "Limitado ⚠️";
+    $("pyStatus").textContent = "No disponible";
   }
 }
 async function runPython(code){
@@ -512,21 +512,39 @@ function renderChallengeHint(){
   const dc = progress.dailyChallenge || { date:null, id:null, attempted:false };
   const seen = progress.seen?.challenge || [];
   const remaining = Math.max(0, (challengeBank?.length || 0) - seen.length);
+  const pill = $("challengePill");
+  const btn = $("startChallengeBtn");
 
-  if(dc.date !== key || !dc.id){
-    $("challengeHint").textContent = remaining
-      ? `Disponible hoy. Quedan ${remaining} retos únicos en el banco.`
-      : "Banco de retos agotado (100).";
+  if(!dc.id){
+    if(pill) pill.textContent = "Agotado";
+    if(btn) btn.disabled = true;
+    $("challengeHint").textContent = "Banco de retos agotado (100).";
     return;
   }
+
+  // available today
+  if(dc.date !== key){
+    if(pill) pill.textContent = "Pendiente";
+    if(btn) btn.disabled = false;
+    $("challengeHint").textContent = remaining
+      ? `Reto disponible. 1 intento. Quedan ${remaining} retos únicos.`
+      : "Reto disponible. 1 intento.";
+    return;
+  }
+
   if(dc.attempted){
+    if(pill) pill.textContent = "Intentado";
+    if(btn) btn.disabled = false;
     $("challengeHint").textContent = `Reto de hoy ya intentado. Vuelve mañana. Quedan ${remaining} retos únicos.`;
   } else {
+    if(pill) pill.textContent = "Pendiente";
+    if(btn) btn.disabled = false;
     $("challengeHint").textContent = remaining
-      ? `Reto de hoy listo. 1 intento. Quedan ${remaining} retos únicos.`
-      : "Banco de retos agotado (100).";
+      ? `Reto disponible. 1 intento. Quedan ${remaining} retos únicos.`
+      : "Reto disponible. 1 intento.";
   }
 }
+
 
 function ensureDailyChallenge(){
   const key = todayKey();

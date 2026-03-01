@@ -64,7 +64,7 @@
           </div>
           <div class="stat">
             <div class="statLabel">Python</div>
-            <div class="statValue" id="pyStatus">Cargando…</div>
+            <div class="statValue" id="pyStatus">Espera</div>
             <div class="statSub" id="pySub">Ejecución en navegador</div>
           </div>
         </div>
@@ -91,8 +91,11 @@
           <div class="pill">1 por día</div>
         </div>
         <div class="small muted">Un ejercicio avanzado, disponible una vez al día.</div>
-        <div class="challengeActions">
-          <button id="startChallengeBtn" class="btn primary">Iniciar reto del día</button>
+        <div class="challengeWrap">
+          <div class="challengeRow">
+            <button id="startChallengeBtn" class="btn primary">Iniciar reto del día</button>
+            <div class="pill pillMuted" id="challengePill">Pendiente</div>
+          </div>
           <div class="small muted" id="challengeHint"></div>
         </div>
       </div>

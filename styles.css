@@ -467,3 +467,22 @@ select, .textInput{ padding: 8px 10px; }
 }
 .challengeActions .btn{ align-self:flex-start; }
 .challengeActions #challengeHint{ margin:0; }
+
+
+/* --- v10.3 challenge layout --- */
+.challengeWrap{
+  margin-top: 12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.challengeRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.challengeRow .btn{ flex: 0 0 auto; }
+.pillMuted{
+  opacity: .9;
+}
