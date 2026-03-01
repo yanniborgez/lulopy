@@ -389,3 +389,47 @@ select, .textInput{ padding: 8px 10px; }
 .hero .chip{margin:0}
 
 .homeBtn{ font-weight:700; }
+
+/* --- v10.1 compact hero layout --- */
+.hero.compactHero{
+  padding: 16px;
+  gap: 12px;
+}
+.hero.compactHero .heroLeft{
+  gap: 8px;
+}
+.hero.compactHero .heroActions.compact{
+  gap: 10px;
+}
+.hero.compactHero .heroActions.compact .btn{
+  padding: 10px 14px;
+}
+.hero.compactHero .statGrid{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 1100px){
+  .hero.compactHero .statGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px){
+  .hero.compactHero .statGrid{
+    grid-template-columns: 1fr;
+  }
+}
+.hero.compactHero .stat{
+  padding: 12px 14px;
+}
+.hero.compactHero .statLabel{
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.hero.compactHero .statValue{
+  font-size: 22px;
+  line-height: 1.1;
+}
+.hero.compactHero .statSub{
+  font-size: 11px;
+  margin-top: 4px;
+}
