@@ -238,6 +238,23 @@ function showHome(){
   $("homeScreen").classList.remove("hidden");
   $("gameScreen").classList.add("hidden");
 }
+
+function renderHomeAll(){
+  try{
+    renderChapterCards();
+  }catch(_){}
+  try{
+    renderDailyUI();
+  }catch(_){}
+  try{
+    renderChallengeHint();
+  }catch(_){}
+  try{
+    updateContinueHint();
+  }catch(_){}
+}
+
+
 function showGame(){
   $("homeScreen").classList.add("hidden");
   $("gameScreen").classList.remove("hidden");
