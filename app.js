@@ -1098,6 +1098,7 @@ function updateExamNote(){
 $("menuBtn").addEventListener("click", openOverlay);
 const __ot = $("openTopicOverlayBtn"); if(__ot) __ot.addEventListener("click", ()=>{ closeOverlay(); openTopicOverlay(null); });
 const __oe = $("openExamOverlayBtn"); if(__oe) __oe.addEventListener("click", ()=>{ closeOverlay(); openExamOverlay(null); });
+const __op = $("openProfileFromConfigBtn"); if(__op) __op.addEventListener("click", ()=>{ closeOverlay(); openProfileOverlay(false); });
 const __homeBtn = $("homeBtn");
 if(__homeBtn){
   __homeBtn.addEventListener("click", ()=>{
