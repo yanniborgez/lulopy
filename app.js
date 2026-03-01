@@ -246,16 +246,12 @@ function updateProgressSummary(){
     const elPct = $("overallPct"); if(elPct) elPct.textContent = `${pct}%`;
     const elCount = $("overallCount"); if(elCount) elCount.textContent = `${done}/${total} completados`;
 
-    // Current chapter: first incomplete, otherwise last
-    let current = CHAPTERS[0];
-    for(const ch of CHAPTERS){
+    // Chapters completed
+    const chaptersDone = CHAPTERS.filter(ch => {
       const pr = chapterProgress(ch.id);
-      if(pr.done < pr.total){ current = ch; break; }
-      current = ch;
-    }
-    const prc = chapterProgress(current.id);
-    const elCh = $("currentChapter"); if(elCh) elCh.textContent = `${current.id}/4`;
-    const elChPct = $("currentChapterPct"); if(elChPct) elChPct.textContent = `${prc.done}/${prc.total} (${prc.pct}%)`;
+      return pr.total > 0 && pr.done >= pr.total;
+    }).length;
+    const elCh = $("chaptersCompleted"); if(elCh) elCh.textContent = `${chaptersDone}/${CHAPTERS.length}`;
 
     // Exams completion
     const byExam = {};
@@ -276,7 +272,6 @@ function updateProgressSummary(){
       if(needed && have >= needed) completedExams += 1;
     }
     const elEC = $("examsCompleted"); if(elEC) elEC.textContent = `${completedExams}/${examIds.length || 0}`;
-    const elEI = $("examItemsDone"); if(elEI) elEI.textContent = `${attemptedExamItems}/${totalExamItems} incisos`;
   }catch(_){}
 }
 
