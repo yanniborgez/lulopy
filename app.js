@@ -678,7 +678,19 @@ function renderCurrent(){
     e.choices.forEach((c, k)=>{
       const row = document.createElement("label");
       row.className = "choice";
-      row.innerHTML = `<input type="radio" name="mcq" value="${k}" /><div><div>${c}</div></div>`;
+
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = "mcq";
+      input.value = String(k);
+
+      const outer = document.createElement("div");
+      const inner = document.createElement("div");
+      inner.textContent = String(c);
+      outer.appendChild(inner);
+
+      row.appendChild(input);
+      row.appendChild(outer);
       wrap.appendChild(row);
     });
     w.appendChild(wrap);
